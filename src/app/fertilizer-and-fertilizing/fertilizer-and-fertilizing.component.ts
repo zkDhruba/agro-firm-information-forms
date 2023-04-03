@@ -7,10 +7,17 @@ import { Component } from '@angular/core';
 })
 export class FertilizerAndFertilizingComponent {
 
-  tableHead = ['ডোজ সংখ্যা Dose No.', 'ইউরিয়া(কেজি) Urea', 'ফসফরাস(কেজি) Phosphorus', 'পটাশ(কেজি) Potash', 'জিংক(কেজি) Zinc', 'অন্যান্য(কেজি) Others']
-  tableData: any = [
-    { column1: 10, column2: 'Row 1 Column 2', column3: 'Row 1 Column 3', column4: 'Row 1 Column 3', column5: 'Row 1 Column 3' }
+  tableHead = ['ডোজ Dose', 'ইউরিয়া(কেজি) Urea', 'ফসফরাস(কেজি) Phosphorus', 'পটাশ(কেজি) Potash', 'জিংক(কেজি) Zinc', 'অন্যান্য(কেজি) Others']
+  tableData = [{ urea: null, phosphorus: null, potash: null, zinc: null, others: null }, { urea: null, phosphorus: null, potash: null, zinc: null, others: null }, { urea: null, phosphorus: null, potash: null, zinc: null, others: null }];
+
+
+  rowData = [
+    { urea: null, phosphorus: null, potash: null, zinc: null, others: null },
+    { urea: null, phosphorus: null, potash: null, zinc: null, others: null },
+    { urea: null, phosphorus: null, potash: null, zinc: null, others: null }
   ];
+
+
 
   selectedFertilizers: string[] = [];
 
@@ -57,9 +64,13 @@ export class FertilizerAndFertilizingComponent {
       checkedAppliedFertilizersOptions.push(FFData.otherFertilizerUsed);
     }
 
+    // let array: any[] = [FFData.urea1, FFData.urea2, FFData.urea3]
+
     console.log(this.selectedFertilizers);
     console.log(checkedAppliedFertilizersOptions);
     console.log(FFData);
+    // console.log(array);
+
 
 
   }

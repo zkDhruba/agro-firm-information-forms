@@ -355,22 +355,25 @@
             </div>
         </div>
         <div class="m-4">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <ng-container *ngFor="let head of tableHead">
-                            <th scope="col" class="text-center">{{head}}</th>
-                        </ng-container>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <ng-container *ngFor="let item of tableData">
-                            <td><input type="number" [(ngModel)]="item.column1"></td>
-                        </ng-container>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center" *ngFor="let head of tableHead">{{ head }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of rowData; let i = index">
+                            <td class="text-center">Dose {{ i + 1 }}</td>
+                            <td><input type="number" [(ngModel)]="row.urea" name="urea{{ i + 1 }}"></td>
+                            <td><input type="number" [(ngModel)]="row.phosphorus" name="phosphorus{{ i + 1 }}"></td>
+                            <td><input type="number" [(ngModel)]="row.potash" name="potash{{ i + 1 }}"></td>
+                            <td><input type="number" [(ngModel)]="row.zinc" name="zinc{{ i + 1 }}"></td>
+                            <td><input type="number" [(ngModel)]="row.others" name="others{{ i + 1 }}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
