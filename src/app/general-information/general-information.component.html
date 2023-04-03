@@ -1,0 +1,742 @@
+<form #generalInformationForm="ngForm" (ngSubmit)="onSubmit(generalInformationForm.value)">
+    <div id="general-information-page" class="border border-secondary bg-light m-5 p-2">
+        <div id="general-information-box">
+            <h2 class="text-center fs-3">
+                ১. সাধারণ তথ্যাবলি <br>
+                1. General Information
+            </h2>
+        </div>
+        <hr>
+        <div id="farm-location-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">ফার্মের অবস্থান এবং কোড</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Farm Location and Code</span>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div id="farm-location-inputs" class="row m-2">
+                <div id="single-input-field" class="col">
+                    <label for="Group Code">
+                            <span>গ্রুপকোড নং<br>
+                                Group Code</span>
+                    </label>
+                    <input id="text-box" class="mt-2 text-box" type="number" ngModel name="groupCodeNo">
+                </div>
+                <div id="single-input-field" class="col">
+                    <label for="Group Code">
+                            <span>ফার্মের কোড<br>
+                                Farm Code</span>
+                    </label>
+                    <input id="text-box" class="mt-2 text-box" type="number" ngModel name="farmCode">
+                </div>
+                <div id="single-input-field" class="col">
+                    <label for="Group Code">
+                            <span>মৌজা<br>
+                                Mouja</span>
+                    </label>
+                    <input id="text-box" class="mt-2 text-box" type="text" ngModel name="mouja">
+                </div>
+            </div>
+            <div id="farm-location-inputs" class="row m-2">
+                <div id="single-input-field" class="col">
+                    <label for="Group Code">
+                            <span>গ্রাম<br>
+                                Village</span>
+                    </label>
+                    <input id="text-box" class="mt-2 text-box" type="text" ngModel name="village">
+                </div>
+                <div id="single-input-field" class="col">
+                    <label for="Group Code">
+                            <span>ইউনিয়ন<br>
+                                P.O</span>
+                    </label>
+                    <input id="text-box" class="mt-2 text-box" type="text" ngModel name="union">
+                </div>
+                <div id="single-input-field" class="col">
+                    <label for="Group Code">
+                            <span>উপজেলা<br>
+                                Upazilla</span>
+                    </label>
+                    <input id="text-box" class="mt-2 text-box" type="text" ngModel name="upzilla">
+                </div>
+                <div id="single-input-field" class="col">
+                    <label for="Group Code">
+                            <span>জেলা<br>
+                                District</span>
+                    </label>
+                    <input id="text-box" class="mt-2 text-box" type="text" ngModel name="district">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------- 
+        Farming System Box 
+    ------------------------------->
+<div class="border border-secondary bg-light m-5 p-2">
+    <div id="farming-system-box" class="container text-center w-50">
+        <div class="row bg-success-subtle">
+            <div class="col border border-secondary border-end-0 p-2">
+                <span class="fs-6">ফার্মিং পদ্ধতি</span>
+            </div>
+            <div class="col border border-secondary p-2">
+                <span class="fs-6">Farming System</span>
+            </div>
+        </div>
+    </div>
+    <div id="farming-system-inputs" class="row m-2">
+        <div class="form-check col">
+            <input class="form-check-input" type="radio" id="single" value="Single" name="system" ngModel>
+            <label class="form-check-label" for="farming-system-type">
+                <span>একক <br>
+                    Single</span>
+            </label>
+        </div>
+        <div class="form-check col">
+            <input class="form-check-input" type="radio" id="cooperative" value="Cooperative" name="system" ngModel>
+            <label class="form-check-label" for="farming-system-type"l>
+                <span>সমবায় <br>
+                    Cooperative</span>
+            </label>
+        </div>
+        <div id="single-input-field" class="col">
+            <label for="Group Code">
+                    <span>মোট কৃষকের সংখ্যা<br>
+                        Total Number of Farmers</span>
+            </label>
+            <input id="text-box" class="mt-2 text-box" type="number" ngModel name="totalFarmers">
+        </div>
+    </div>
+    <div id="farming-system-inputs" class="row m-2">
+        <div id="single-input-field" class="col">
+            <label for="Group Code">
+                    <span>উৎপাদক দলপতির নাম<br>
+                        Producer Leader Name</span>
+            </label>
+            <input id="text-box" class="mt-2 text-box" type="text" ngModel name="leaderName">
+        </div>
+        <div id="single-input-field" class="col">
+            <label for="Group Code">
+                    <span>গ্রুপের মোট জমির পরিমান<br>
+                        Total land in Group</span>
+            </label>
+            <input id="text-box" class="mt-2 text-box" type="number" ngModel name="groupTotalLand">
+        </div>
+    </div>
+</div>
+<!----------------------------- 
+    Farmer Information Box 
+    -------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="farmer-information-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">কৃষকের তথ্য</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Farmer Information</span>
+                </div>
+            </div>
+        </div>
+        <div id="farmer-information-inputs" class="row m-2">
+            <div id="single-input-field" class="col">
+                <label for="Group Code">
+                        <span>নাম<br>
+                            Name</span>
+                </label>
+                <input id="text-box" class="mt-2 text-box " type="text" ngModel name="farmerName">
+            </div>
+            <div id="single-input-field" class="col">
+                <label for="Group Code">
+                        <span>উৎপাদকের প্রোফাইল আইডি<br>
+                            Farm Profile ID</span>
+                </label>
+                <input id="text-box" class="mt-2 text-box" type="number" ngModel name="framProfileCode">
+            </div>
+            <div id="single-input-field" class="col">
+                <label for="Group Code">
+                        <span>গ্রাম<br>
+                            Village</span>
+                </label>
+                <input id="text-box" class="mt-2 text-box" type="text" ngModel name="farmerVillage">
+            </div>
+        </div>
+        <div id="farmer-information" class="row m-2">
+            <div id="single-input-field" class="col">
+                <label for="Group Code">
+                        <span>উপজেলা<br>
+                            Upazilla</span>
+                </label>
+                <input id="text-box" class="mt-2 text-box" type="text" ngModel name="farmerUpzilla">
+            </div>
+            <div id="single-input-field" class="col">
+                <label for="Group Code">
+                        <span>ইউনিয়ন<br>
+                            P.O</span>
+                </label>
+                <input id="text-box" class="mt-2 text-box" type="text" ngModel name="farmerUnion">
+            </div>
+            <div id="single-input-field" class="col">
+                <label for="Group Code">
+                        <span>জেলা<br>
+                            District</span>
+                </label>
+                <input id="text-box" class="mt-2 text-box" type="text" ngModel name="farmerDistrict">
+            </div>
+        </div>
+    </div>
+    <!----------------------- 
+        Farmer Type Box 
+    ------------------------->
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="farmer-type-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">কৃষকের ধরণ</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Farmer Type</span>
+                </div>
+            </div>
+        </div>
+        <div id="farmer-type-inputs" class="row m-2">
+            <div class="form-check col">
+                <input class="form-check-input" type="radio" id="small-farmer" value="Small" name="type" ngModel>
+                <label class="form-check-label" for="farmer-type">
+                    <span>ছোট <br>
+                        Small</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="radio" id="medium-farmer" value="Medium" name="type" ngModel>
+                <label class="form-check-label" for="farmer-type">
+                    <span>মাঝারি <br>
+                        Medium</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="radio" id="large-farmer" value="Large" name="type" ngModel>
+                <label class="form-check-label" for="farmer-type">
+                    <span>বড় <br>
+                        Large</span>
+                </label>
+            </div>
+        </div>
+        <div id="farmer-type-inputs" class="row m-2">
+            <div id="single-input-field" class="col">
+                <label for="Group Code">
+                        <span>নিজের জমি (একর)<br>
+                            Owned land(Acre)</span>
+                </label>
+                <input id="text-box" class="mt-2 text-box" type="number" ngModel name="ownedLand">
+            </div>
+            <div id="single-input-field" class="col">
+                <label for="Group Code">
+                        <span>লিজ (একর)<br>
+                            Lease(Acre)</span>
+                </label>
+                <input id="text-box" class="mt-2 text-box" type="number" ngModel name="lease">
+            </div>
+            <div id="single-input-field" class="col">
+                <label for="Group Code">
+                        <span>মোট কৃষি জমির পরিমান (একর)<br>
+                            Total arable land (Acre)</span>
+                </label>
+                <input id="text-box" class="mt-2 text-box" type="number" ngModel name="totalLand">
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------
+        Site Selection Box
+    ---------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="site-selection-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">জমি নির্বাচন</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Site Selection</span>
+                </div>
+            </div>
+        </div>
+        <div id="site-selection-inputs" class="row m-2">
+            <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+                <div class="form-check">
+                    <span>&#x2022; জমি নির্বাচনে কৃষি সম্প্রসারণ কর্মকর্তার সমন্বয় ও বৈজ্ঞানিক উপায়ে হইয়াছে কিনা-</span><br>
+                    <span>Did coordination of Agriculture Extension Officer and Scientific procedure followed on selection of the site?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info1-yes" [value]=true name="info1" ngModel>
+                        <label class="form-check-label" for="info-1">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info1-no" [value]=false name="info1" ngModel>
+                        <label class="form-check-label" for="info-1">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mb-2">
+                <div class="form-check">
+                    <span>&#x2022; গ্রপের সকল জমি একই সাথে নির্বাচন করা হয়েছে কিনা?</span><br>
+                    <span>Does the group land selected at a time?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info2-yes" [value]=true name="info2" ngModel>
+                        <label class="form-check-label" for="info-2">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info2-no" [value]=false name="info2" ngModel>
+                        <label class="form-check-label" for="info-2">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mb-2">
+                <div class="form-check">
+                    <span>&#x2022; নির্বাচিত জমি ফসল উতপাদনের জন্য উপযোগী কিনা-</span><br>
+                    <span>Did the selected land suitable for crop cultivation</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info3-yes" [value]=true name="info3" ngModel>
+                        <label class="form-check-label" for="info-3">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info3-no" [value]=false name="info3" ngModel>
+                        <label class="form-check-label" for="info-3">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mb-2">
+                <div class="form-check">
+                    <span>&#x2022; পাশাপাশি জমিতে একই ফসল করতে অন্য কৃষক আগ্রহী কিনা-</span><br>
+                    <span>Is the farmer from nearby land interested on cultivation of same crop?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info4-yes" [value]=true name="info4" ngModel>
+                        <label class="form-check-label" for="info-4">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info4-no" [value]=false name="info4" ngModel>
+                        <label class="form-check-label" for="info-4">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mb-2">
+                <div class="form-check">
+                    <span>&#x2022; নির্বাচিত জমি নির্বাচিত ফসলের জন্য উপযুক্ত কিনা-</span><br>
+                    <span>Does the selected crop compatible selected land?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info5-yes" [value]=true name="info5" ngModel>
+                        <label class="form-check-label" for="info-5">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info5-no" [value]=false name="info5" ngModel>
+                        <label class="form-check-label" for="info-5">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mb-2">
+                <div class="form-check">
+                    <span>&#x2022; নির্বাচিত জমিতে গৃহপালিত পশুপাখি বিচরণ করে কিনা-</span><br>
+                    <span>Does a domestic animal or birds roam on the selected land?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info6-yes" [value]=true name="info6" ngModel>
+                        <label class="form-check-label" for="info-6">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info6-no" [value]=false name="info6" ngModel>
+                        <label class="form-check-label" for="info-6">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mb-2">
+                <div class="form-check">
+                    <span>&#x2022; জমির নিকট কোন ক্ষতিকর কলকারখানা আছে কিনা-</span><br>
+                    <span>Does there any harmful industries nearby?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info7-yes" [value]=true name="info7" ngModel>
+                        <label class="form-check-label" for="info-7">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info7-no" [value]=false name="info7" ngModel>
+                        <label class="form-check-label" for="info-7">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mb-2">
+                <div class="form-check">
+                    <span>&#x2022; বীজ তলায় কোন পোকা ও রোগের লক্ষণ ছিল কিনা-</span><br>
+                    <span>Have any symptom of insect and pathogen seen in seeding bed?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info8-yes" [value]=true name="info8" ngModel>
+                        <label class="form-check-label" for="info-8">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info8-no" [value]=false name="info8" ngModel>
+                        <label class="form-check-label" for="info-8">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+<div class="d-flex justify-content-between single-info-line mb-2">
+  <div class="form-check">
+    <span>&#x2022; পানি উৎস</span><br>
+    <span>Source of water</span>
+  </div>
+  <div class="flex-container gap-2 row m-2">
+    <div class="form-check col">
+      <input class="form-check-input" type="checkbox" id="river-water" value="River" name="river-water" [(ngModel)]="checkedWaterSource.River" />
+      <label class="form-check-label" for="water-source-river">
+        <span>নদীর পানি<br />River water</span>
+      </label>
+    </div>
+    <div class="form-check col">
+      <input class="form-check-input" type="checkbox" id="pond-water" value="Pond" name="pond-water" [(ngModel)]="checkedWaterSource.Pond" />
+      <label class="form-check-label" for="water-source-pond">
+        <span>পুকুরের পানি<br />Pond water</span>
+      </label>
+    </div>
+    <div class="form-check col">
+      <input class="form-check-input" type="checkbox" id="rain-water" value="Rain" name="rain-water" [(ngModel)]="checkedWaterSource.Rain" />
+      <label class="form-check-label" for="water-source-rain">
+        <span>বৃষ্টির পানি<br />Rain water</span>
+      </label>
+    </div>
+    <div class="form-check col">
+      <input class="form-check-input" type="checkbox" id="ground-water" value="Ground" name="ground-water" [(ngModel)]="checkedWaterSource.Ground" />
+      <label class="form-check-label" for="water-source-ground">
+        <span>ভূ-গর্ভস্থ পানি<br />Ground water</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mb-2">
+                <div class="form-check">
+                    <span>&#x2022; জমির নিকট বসতি বাড়ী আছে কিনা-</span><br>
+                    <span>Did coordination of Agriculture Extension Officer and Scientific procedure followed on selection of the site?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info9-yes" [value]=true name="info9" ngModel>
+                        <label class="form-check-label" for="info-9">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="info9-no" [value]=false name="info9" ngModel>
+                        <label class="form-check-label" for="info-9">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------
+        Contracted Land and Corp Info Box
+        ---------------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="farming-system-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">চুক্তিবদ্ধ জমির পরিমান</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Contracted Land and Crop Information</span>
+                </div>
+            </div>
+        </div>
+        <div id="farming-system-inputs" class="">
+            <div class="d-flex justify-content-between row m-2">
+                <div id="single-input-field" class="col">
+                    <label for="Group Code">
+                            <span class="mt-2">জমির পরিমান(একর)<br>
+                                Land of Contract Area</span>
+                    </label>
+                    <input class="mt-2 text-box" id="contract-area" type="number" ngModel name="cantractLand">
+                </div>
+                <div class="col flex-container row gap-3">
+                    <div class="col">
+                        <span>উৎপাদিত পদ্ধতিঃ<br>
+                            Production Method:</span>
+                    </div>
+                    <div class="form-check col">
+                        <input class="form-check-input" id="open-field" type="radio" value="Open Field" name="productionMethod" ngModel>
+                        <label class="form-check-label" for="production-method">
+                            <span>উন্মুক্ত মাঠ<br>
+                                Open Field</span>
+                        </label>
+                    </div>
+                    <div class="form-check col">
+                        <input class="form-check-input" id="net-house" type="radio" value="Net House" name="productionMethod" ngModel>
+                        <label class="form-check-label" for="production-method">
+                            <span>নেট হাউস<br>
+                                Net House</span>
+                        </label>
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="farming-system-inputs" class="row m-2">
+                <div id="single-input-field" class="col">
+                    <span>সবজিঃ<br>
+                        Vegetable:</span>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" id="brinjal" type="checkbox" name="brinjal" [(ngModel)]="checkedVegetables.Brinjal" value="Brinjal">
+                    <label class="form-check-label" for="vegetables">
+                        <span>বেগুন<br>
+                            Brinjal</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="checkbox" name="bean" [(ngModel)]="checkedVegetables.Bean" value="Bean"  id="bean">
+                    <label class="form-check-label" for="vegetables">
+                        <span>সীম<br>
+                            Bean</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="checkbox" name="snake-gourd" [(ngModel)]="checkedVegetables.SnakeGourd" value="Snake Gourd" id="snake-gourd">
+                    <label class="form-check-label" for="vegetables">
+                        <span>চিচিঙ্গা<br>
+                            Snake Gourd</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="checkbox" name="bitter-gourd" [(ngModel)]="checkedVegetables.BitterGourd" value="Bitter Gourd" id="bitter-gourd">
+                    <label class="form-check-label" for="vegetables">
+                        <span>করলা<br>
+                            Bitter Gourd</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="checkbox" name="spine-gourd" [(ngModel)]="checkedVegetables.SpineGourd" value="Spine Gourd" id="spine-gourd">
+                    <label class="form-check-label" for="vegetables">
+                        <span>কাকরোল<br>
+                            Spine Gourd</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="checkbox" name="bottle-gourd" [(ngModel)]="checkedVegetables.BottleGourd" value="Bottle Gourd" id="bottle-gourd">
+                    <label class="form-check-label" for="vegetables">
+                        <span>লাউ<br>
+                            Bottle Gourd</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="checkbox" name="pointed-gourd" [(ngModel)]="checkedVegetables.PointedGourd" value="Pointed Gourd" id="pointed-gourd">
+                    <label class="form-check-label" for="vegetables">
+                        <span>পটল<br>
+                            Pointed Gourd</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="checkbox" name="cabbage" [(ngModel)]="checkedVegetables.Cabbage" value="Cabbage" id="cabbage">
+                    <label class="form-check-label" for="vegetables">
+                        <span>বাঁধাকপি<br>
+                            Cabbage</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="checkbox" name="betel-leaf" [(ngModel)]="checkedVegetables.BetelLeaf" value="Betel Leaf" id="betel-leaf">
+                    <label class="form-check-label" for="vegetables">
+                        <span>পান<br>
+                            Betel Leaf</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="checkbox" name="mango" [(ngModel)]="checkedVegetables.Mango" value="Mango" id="mango">
+                    <label class="form-check-label" for="vegetables">
+                        <span>আম<br>
+                            Mango</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------
+        Soil Type and Cultivation Practice
+        -------------------------------->
+        <div class="border border-secondary bg-light m-5 p-2">
+            <div id="soil-type-box" class="container text-center w-50">
+                <div class="row bg-success-subtle">
+                    <div class="col border border-secondary border-end-0 p-2">
+                        <span class="fs-6">মাটির ধরণ ও চাষ পদ্ধতি</span>
+                    </div>
+                    <div class="col border border-secondary p-2">
+                        <span class="fs-6">Soil Type and Cultivation Practice</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="soil-type-inputs" class="row m-2 flex-wrap">
+                    <div class="form-check col">
+                        <input class="form-check-input" type="radio" id="sandy" value="Sandy" name="soilName" ngModel>
+                        <label class="form-check-label" for="soil-type">
+                            <span>বেলে<br>
+                                Sandy</span>
+                        </label>
+                    </div>
+                    <div class="form-check col">
+                        <input class="form-check-input" type="radio" id="loamy" value="Loamy" name="soilName" ngModel>
+                        <label class="form-check-label" for="soil-type">
+                            <span>দোআঁশ<br>
+                                Loamy</span>
+                        </label>
+                    </div>
+                    <div class="form-check col">
+                        <input class="form-check-input" type="radio" id="clay" value="Clay" name="soilName" ngModel>
+                        <label class="form-check-label" for="soil-type">
+                            <span>এঁটেল<br>
+                                Clay</span>
+                        </label>
+                    </div>
+                    <div id="single-input-field" class="col text-center">
+                        <label for="Group Code">
+                                <span class="mt-2">মাটির P<sup>H</sup><br>
+                                    Land of Contract Area</span>
+                        </label>
+                        <input class="mt-2 text-box" id="soil-ph" type="number" ngModel name="soilPH">
+                    </div>
+                </div>
+                <div id="cropping-type-inputs" class="row m-2">
+                    <div class="form-check col">
+                        <input class="form-check-input" id="single-cropped" type="radio" value="Single" name="croppedType" ngModel>
+                        <label class="form-check-label" for="cropping-type">
+                            <span>একফসলী<br>
+                                Single Cropped</span>
+                        </label>
+                    </div>
+                    <div class="form-check col">
+                        <input class="form-check-input" id="double-cropped" type="radio" value="Double" name="croppedType" ngModel>
+                        <label class="form-check-label" for="cropping-type">
+                            <span>দোফসলী<br>
+                                Double Cropped</span>
+                        </label>
+                    </div>
+                    <div class="form-check col">
+                        <input class="form-check-input" id="triple-cropped" type="radio" value="Triple" name="croppedType" ngModel>
+                        <label class="form-check-label" for="cropping-type">
+                            <span>ত্রিফসলী<br>
+                                Triple Cropped</span>
+                        </label>
+                    </div>
+                    <div id="single-input-field" class="col text-center">
+                        <label for="Group Code">
+                                <span class="mt-2">পূর্ববর্তী ফসল<br>
+                                    Previous Crop</span>
+                        </label>
+                        <input class="mt-2 text-box" id="previous-crop" type="text" ngModel name="previousCrop">
+                    </div>
+                </div>
+                <div id="cultivation-practice-inputs" class="row m-2">
+                    <div class="form-check col">
+                        <input class="form-check-input" type="radio" value="Traditional" name="cultivationType" ngModel>
+                        <label class="form-check-label" for="cultivation-practice">
+                            <span>প্রচলিত<br>
+                                Traditional</span>
+                        </label>
+                    </div>
+                    <div class="form-check col">
+                        <input class="form-check-input" type="radio" value="Modern" name="cultivationType" ngModel>
+                        <label class="form-check-label" for="cultivation-practice">
+                            <span>আধুনিক<br>
+                                Modern</span>
+                        </label>
+                    </div>
+                    <div id="single-input-field" class="col text-center">
+                        <label for="Group Code">
+                                <span class="mt-2">কৃষি জোন<br>
+                                    AEZ No</span>
+                        </label>
+                        <input class="mt-2 text-box" id="previous-crop" type="number" ngModel name="AEZ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mb-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+</form>

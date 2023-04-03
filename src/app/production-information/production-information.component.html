@@ -1,0 +1,623 @@
+<form #productionInformationForm="ngForm" (ngSubmit)="onSubmitProductionInfo(productionInformationForm.value)">
+    <div id="production-information-page" class="border border-secondary bg-light m-5 p-2">
+        <div id="general-information-box">
+            <h2 class="text-center fs-3">
+                ২. উৎপাদনকালীন তথ্যাবলি <br>
+                2. Production Information
+            </h2>
+        </div>
+        <hr>
+        <div id="crop-information-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">ফসল পরিচিতি</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Crop Information</span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row m-2">
+                <div class="col text-center">
+                    <label for="Variety">
+                        <span class="mt-2">জাত<br>
+                            Variety</span>
+                    </label>
+                    <input class="mt-2 text-box" id="variety" type="text" ngModel name="varietyName">
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="hybrid" value="Hybrid" name="varietyType" ngModel>
+                    <label class="form-check-label" for="variety-type">
+                        <span>সংকর জাত <br>
+                            Hybrid</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="local-seed" value="Local Seed" name="varietyType"
+                        ngModel>
+                    <label class="form-check-label" for="variety-type">
+                        <span>লোকাল জাত <br>
+                            Local Seed</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; গ্রুপের সকল জমিতে একই জাত ব্যবহার করা হইয়াছে কি না-</span><br>
+                <span>Does same variety use in the group land?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="used-groupland-yes" [value]=true
+                        name="usedInGourpLand" ngModel>
+                    <label class="form-check-label" for="used-in-group-land">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="used-groupland-no" [value]=false
+                        name="usedInGourpLand" ngModel>
+                    <label class="form-check-label" for="used-in-group-land">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------------------
+        Raising Seed Box
+    ------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="raising-seedbox-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">চারা উৎপাদন</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Raising of Seed</span>
+                </div>
+            </div>
+        </div>
+        <div id="raising-seedbox-inputs" class="row m-2">
+            <div class="row single-info-line mt-2 mb-2">
+                <div class="form-check col">
+                    <span>&#x2022; চারা উৎপাদন:</span><br>
+                    <span>Raisng of Seedling:</span>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="by-seeds" value="By Seeds" name="raising" ngModel>
+                    <label class="form-check-label" for="raising-from">
+                        <span>বীজ থেকে<br>
+                            By Seeds</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="using-cutting" value="Using Cutting" name="raising"
+                        ngModel>
+                    <label class="form-check-label" for="raising-from">
+                        <span>কাটিং থেকে<br>
+                            Using Cutting</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="raising-others" value="Others" name="raising"
+                        ngModel>
+                    <label class="form-check-label" for="raising-from">
+                        <span>অন্যান্য<br>
+                            Others</span>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div class="row single-info-line mt-2 mb-2">
+                <div class="form-check col">
+                    <span>&#x2022; চারা উৎপাদন করা হয়েছিল:</span><br>
+                    <span>Seeds were raised in:</span>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="seedbed" value="Seedbed" name="seedsWereRaised"
+                        ngModel>
+                    <label class="form-check-label" for="raising-place">
+                        <span>বীজতলায়<br>
+                            Seedbed</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="polybag" value="Polybag" name="seedsWereRaised"
+                        ngModel>
+                    <label class="form-check-label" for="raising-place">
+                        <span>পলিব্যাগ <br>
+                            Polybag</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="raised-in" value="Others" name="seedsWereRaised"
+                        ngModel>
+                    <label class="form-check-label" for="raising-place">
+                        <span>অন্যান্য<br>
+                            Others</span>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <div class="form-check mt-4" id="organic-fertilizer-question">
+                    <span>&#x2022; চারা উৎপাদনে ব্যবহৃত জৈব সার:</span><br>
+                    <span>Which organic fertilizer was used in raising of seedling?</span>
+                </div>
+                <div class="mt-4">
+                    <div class="d-flex d-flex justify-content-evenly row">
+                        <div class="form-check col ms-5 pe-0">
+                            <input class="form-check-input" type="checkbox" [value]=true name="isCowdungUsed" ngModel>
+                            <label class="form-check-label" for="cow-dung">
+                                <span>গোবর সার<br>
+                                    Cowdung</span>
+                            </label>
+                        </div>
+                        <div class="input-group mb-3 me-5 col">
+                            <span class="input-group-text">পরিমান<br>
+                                Amount</span>
+                            <input type="number" class="form-control" name="cowdungAmount" ngModel>
+                            <span class="input-group-text">কেজি<br>
+                                KG</span>
+                        </div>
+                    </div>
+                    <div class="d-flex d-flex justify-content-evenly row">
+                        <div class="form-check col ms-5">
+                            <input class="form-check-input" type="checkbox" [value]=true name="isVarmiCompostUsed"
+                                ngModel>
+                            <label class="form-check-label" for="cow-dung">
+                                <span>ভার্মিকম্পোস্ট<br>
+                                    Vermi Compost</span>
+                            </label>
+                        </div>
+                        <div class="input-group mb-3 me-5 col">
+                            <span class="input-group-text">পরিমান<br>
+                                Amount</span>
+                            <input type="number" class="form-control" name="varmiCompostAmount" ngModel>
+                            <span class="input-group-text">কেজি<br>
+                                KG</span>
+                        </div>
+                    </div>
+                    <div class="d-flex d-flex justify-content-evenly row">
+                        <div class="form-check col ms-5">
+                            <input class="form-check-input" type="checkbox" [value]=true name="isCocodustUsed" ngModel>
+                            <label class="form-check-label" for="cow-dung">
+                                <span>কোকোডাস্ট<br>
+                                    Cocodust</span>
+                            </label>
+                        </div>
+                        <div class="input-group mb-3 me-5 col">
+                            <span class="input-group-text">পরিমান<br>
+                                Amount</span>
+                            <input type="number" class="form-control" name="cocodustAmount" ngModel>
+                            <span class="input-group-text">কেজি<br>
+                                KG</span>
+                        </div>
+                    </div>
+                    <div class="d-flex d-flex justify-content-evenly row">
+                        <div class="form-check col ms-5">
+                            <input class="form-check-input" type="checkbox" [value]=true name="isBiofertilizerUsed"
+                                ngModel>
+                            <label class="form-check-label" for="cow-dung">
+                                <span>বায়োফার্টিলাইজার<br>
+                                    Biofertilizer</span>
+                            </label>
+                        </div>
+                        <div class="input-group mb-3 me-5 col">
+                            <span class="input-group-text">পরিমান<br>
+                                Amount</span>
+                            <input type="number" class="form-control" name="biofertilizerAmount" ngModel>
+                            <span class="input-group-text">কেজি<br>
+                                KG</span>
+                        </div>
+                    </div>
+                    <div class="d-flex d-flex justify-content-evenly row">
+                        <div class="form-check col ms-5">
+                            <input class="form-check-input" type="checkbox" [value]=true name="isOtherUsed" ngModel>
+                            <label class="form-check-label" for="cow-dung">
+                                <span>অন্যান্য<br>
+                                    Others</span>
+                            </label>
+                        </div>
+                        <div class="input-group mb-3 me-5 col">
+                            <span class="input-group-text">পরিমান<br>
+                                Amount</span>
+                            <input type="number" class="form-control" name="otherAmount" ngModel>
+                            <span class="input-group-text">কেজি<br>
+                                KG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+                <div class="form-check">
+                    <span>&#x2022; বীজ তলায় কোন পোকা ও রোগের লক্ষণ ছিল কিনা-</span><br>
+                    <span>Any symptom of insect and pathogen were seen in seedling in seedbed?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="insect-pathogen-yes" [value]=true name="insectPathogenSymptoms"
+                            ngModel>
+                        <label class="form-check-label" for="NOT-GIVEN">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="insect-pathogen-no" [value]=false name="insectPathogenSymptoms"
+                            ngModel>
+                        <label class="form-check-label" for="NOT-GIVEN">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+                <div class="form-check">
+                    <span>&#x2022; চারার মূল জমিতে স্থানান্তরিত করার সময় বয়স কত ছিল?</span><br>
+                    <span>The age of the seedlings during transplanted at themain field?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="col text-center">
+                        <label for="seedling-age"></label>
+                        <input class="mt-2 text-box" id="seedling-age" type="number" ngModel name="seedlingAge">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------
+        Land Preparation Box
+    --------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="land-preparation-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">জমি প্রস্তুত</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Land Preparation</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row single-info-line mt-2 mb-2">
+                <div class="form-check col">
+                    <span>&#x2022; ব্যবহৃত মাধ্যম:</span><br>
+                    <span>Plough:</span>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="by-tractor" value="Tractor" name="plough" ngModel>
+                    <label class="form-check-label" for="raising-from">
+                        <span>ট্রাক্টর<br>
+                            Tractor</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="using-cutting" value="Plough" name="plough"
+                        ngModel>
+                    <label class="form-check-label" for="raising-from">
+                        <span>হাল চাষ<br>
+                            Plough</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="raising-others" value="Spade" name="plough"
+                        ngModel>
+                    <label class="form-check-label" for="raising-from">
+                        <span>কোদাল<br>
+                            Spade</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; গ্রপের সকল জমি একসাথে প্রস্তুত করা হইয়াছে কিনা?</span><br>
+                <span>Does all plot of group prepared same time?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="group-prepared-yes" [value]=true
+                        name="isGroupPreapared" ngModel>
+                    <label class="form-check-label" for="group-prepared">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="group-prepared-no" [value]=false
+                        name="isGroupPreapared" ngModel>
+                    <label class="form-check-label" for="group-prepared">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------------------------------------
+        Seed sowing transplanting Related Information Box
+    --------------------------------------------------------->
+
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="raising-seedbox-box" class="container text-center w-75">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">বীজ বপন, রোপণ ও অন্যান্য তথ্য</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Seed sowing transplanting Related Information</span>
+                </div>
+            </div>
+        </div>
+        <div id="seed-sowing-inputs" class="row m-2">
+            <div class="row single-info-line mt-2 mb-2">
+                <div class="form-check col">
+                    <span>বীজ উৎস:</span><br>
+                    <span>Seed Source:</span>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="from-farmers" value="From Farmer" name="seedSource" (click)="DisableCompanyName($event)" ngModel>
+                    <label class="form-check-label" for="seed-source-farmer">
+                        <span>কৃষক<br>
+                            Farmers</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="from-farmers" value="From Dealer" name="seedSource" (click)="DisableCompanyName($event)" ngModel>
+                    <label class="form-check-label" for="seed-source-farmer">
+                        <span>ডিলার হতে<br>
+                            From Dealer</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="from-dealers" value="From Company"  name="seedSource" (click)="EnableCompanyName($event)" ngModel>
+                    <label class="form-check-label" for="seed-source-dealer">
+                        <span>কোম্পানী হতে<br>
+                            From Company</span>
+                    </label>
+                </div>
+                <div class="col text-center" id="company-name-detail">
+                    <label for="seed-source">
+                        <span class="mt-2">কোম্পানীর নাম<br>
+                            Company Name</span>
+                    </label>
+                    <input class="mt-2 text-box" id="company-name" type="text" name="companyName" [disabled]="isCompanyDisabled " ngModel>
+                </div>
+            </div>
+            <hr>
+            <div class="row single-info-line mt-2 mb-2">
+                <div class="form-check col">
+                    <span>বপন বা রোনের সময়:</span><br>
+                    <span>Sowing/Planting time:</span>
+                </div>
+                <div class="form-check col">
+                    <span>বীজ শোধন:</span><br>
+                    <span>Seed treatment:</span>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="treatment-yes" [value]=true name="seedTreatment" (click)="EnableFungcideName($event)" ngModel>
+                    <label class="form-check-label" for="seed-source-farmer">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="from-dealers" [value]=false  name="seedTreatment" (click)="DisableFungcideName($event)" ngModel>
+                    <label class="form-check-label" for="seed-source-dealer">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+                <div class="col text-center" id="fungcide-name-detail">
+                    <label for="pesticide-fungicide">
+                        <span class="mt-2">শোধকের নাম<br>
+                            Name of use Pesticide/Fungcide</span>
+                    </label>
+                    <input class="mt-2 text-box" id="company-name" type="text" name="fungicideName" [disabled]="isFungcideDisabled" ngModel>
+                </div>
+            </div>
+            <hr>
+            <div class="row single-info-line mt-2 mb-2">
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="using-cutting" value="Direct Sowing" name="sowingType"
+                        ngModel>
+                    <label class="form-check-label" for="raising-from">
+                        <span>সরাসরি বপন<br>
+                            Direct Sowing</span>
+                    </label>
+                </div>
+                <div class="form-check col">
+                    <input class="form-check-input" type="radio" id="treatment-yes" value="Seedling raised in seedbed" name="sowingType"
+                        ngModel>
+                    <label class="form-check-label text-box" for="direct-sowing">
+                        <span>বীজতলায় বপন<br>
+                            Seedling raised in seedbed</span>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div class="row single-info-line mt-2 mb-2">
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">গাছ থেকে গাছের দূরত্ব<br>
+                        Plant to plant distance(meter)</span>
+                    <input type="number" class="form-control" name="plantDistance" ngModel>
+                    <span class="input-group-text">মিটার<br>
+                        Meter</span>
+                </div>
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">সারি থেকে সারির দূরত্ব<br>
+                        Row to row distance(meter)</span>
+                    <input type="number" class="form-control" name="rowDistance" ngModel>
+                    <span class="input-group-text">মিটার<br>
+                        Meter</span>
+                </div>
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">বাগানের ক্ষেত্রে বয়স<br>
+                        Age of garden (years)</span>
+                    <input type="number" class="form-control" name="gardenAge" ngModel>
+                    <span class="input-group-text">বছর<br>
+                        Age</span>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+                <div class="form-check">
+                    <span>&#x2022; গ্রুপের সকল জমি এক সাথে বপন বা রোপন করা হইয়াছে কি না?</span><br>
+                    <span>Does same day all plot of planted in group?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="group-planted-yes" [value]=true
+                            name="plantedInGroup" ngModel>
+                        <label class="form-check-label" for="group-planted-yes">
+                            <span>হ্যা <br>
+                                Yes</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="group-planted-no" [value]=false
+                            name="plantedInGroup" ngModel>
+                        <label class="form-check-label" for="group-planted-no">
+                            <span>না<br>
+                                No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+                <div class="form-check">
+                    <span>&#x2022; যদি না হয়ে থাকে তবে পার্থক্য ছিল কত দিন?</span><br>
+                    <span>If not how many days were different?</span>
+                </div>
+                <div class="flex-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="group-planted-yes" [value]=2
+                            name="dayDifference" ngModel>
+                        <label class="form-check-label" for="group-planted-yes">
+                            <span> ২ দিন <br>
+                                2 days</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="group-planted-no" [value]=4
+                            name="dayDifference" ngModel>
+                        <label class="form-check-label" for="group-planted-no">
+                            <span>৪ দিন<br>
+                                4 days</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="group-planted-no" [value]=7
+                            name="dayDifference" ngModel>
+                        <label class="form-check-label" for="group-planted-no">
+                            <span>৭ দিন<br>
+                                7 days</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------
+        Selection of Crops and Weeding
+    -------------------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="selection-crops-box" class="container text-center w-75">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">ফসল নির্বাচন ও আগাছা দমন</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Selection of Crops and Weeding</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <label for="crop-name">
+                <span class="mt-4">ফসলের নাম<br>
+                   Name of Crop</span>
+            </label>
+            <input class="mt-2 text-box" id="variety" type="text" ngModel name="cropName">
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সঠিক সময়ে আগাছা দমন হইয়াছে?</span><br>
+                <span>Weeding done at proper time?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="weeding-propertime-yes" [value]=true
+                        name="isWeedingPoperTime" ngModel>
+                    <label class="form-check-label" for="weeding-propertime-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="weeding-propertime-no" [value]=false
+                        name="isWeedingPoperTime" ngModel>
+                    <label class="form-check-label" for="weeding-propertime-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row single-info-line mt-2 mb-2">
+            <div class="input-group mb-3 me-5 col">
+                <span class="input-group-text">প্রথম আগাছা পরিষ্কারের তারিখ<br>
+                    Date of First Weeding</span>
+                <input type="date" class="form-control" name="firstWeedingDate" ngModel>
+            </div>
+            <div class="input-group mb-3 me-5 col">
+                <span class="input-group-text">দ্বিতীয় আগাছা পরিষ্কারের তারিখ<br>
+                    Date of Second Weeding</span>
+                <input type="date" class="form-control" name="sceondWeedingDate" ngModel>
+            </div>
+        </div>
+        <div class="row single-info-line mt-2 mb-2">
+            <div class="input-group mb-3 me-5 col">
+                <span class="input-group-text">তৃতীয় আগাছা পরিষ্কারের তারিখ<br>
+                    Date of Third Weeding</span>
+                <input type="date" class="form-control" name="thirdWeedingDate" ngModel>
+            </div>
+            <div class="input-group mb-3 me-5 col">
+                <span class="input-group-text">পরবর্তী ফসলের জন্য পরিচর্যার তারিখ<br>
+                    Date of Weeding for Next Crop</span>
+                <input type="date" class="form-control" name="nextWeedingDate" ngModel>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

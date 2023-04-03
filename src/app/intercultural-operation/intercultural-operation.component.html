@@ -1,0 +1,629 @@
+<form form #interculturalOperationForm="ngForm" (ngSubmit)="onSubmitInterculturalOperation(interculturalOperationForm.value)">
+    <div id="intercultural-operation-page" class="border border-secondary bg-light m-5 p-2">
+        <div id="irrigation-and-irrigation-source-box">
+            <h2 class="text-center fs-3">
+                ৪. অন্তঃর্বর্তীকালীন পরিচর্যা<br>
+                4. Intercultural Operation
+            </h2>
+        </div>
+        <hr>
+        <div id="irrigation-source-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">আগাছা দমন এবং আন্তঃপরিচর্যা</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Weeding and Intercultural Operation</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; জমি সবসময় পরিষ্কার রাখা হয় কিনা-</span><br>
+                <span>Is the field keeps clean all the time?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="field-clean-yes" [value]=true name="isCleaned"
+                        ngModel>
+                    <label class="form-check-label" for="field-clean-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="field-clean-no" [value]=false name="isCleaned"
+                        ngModel>
+                    <label class="form-check-label" for="field-clean-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সঠিক সময়ে আগাছা দমন করা হয় কিনা-</span><br>
+                <span>Is weeding done timely?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="timely-weeding-yes" [value]=true
+                        name="timelyWeeding" ngModel>
+                    <label class="form-check-label" for="timely-weeding-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="timely-weeding-no" [value]=false
+                        name="timelyWeeding" ngModel>
+                    <label class="form-check-label" for="timely-weeding-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; জমি চাষের আগে প্রাথমিকভাবে আগাছা দমন করা হয়েছিল কিনা-</span><br>
+                <span>Was the field primarily weeded before ploughing?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="primarily-weeded-yes" [value]=true
+                        name="primarilyWeeded" ngModel>
+                    <label class="form-check-label" for="primarily-weeded-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="primarily-weeded-no" [value]=false
+                        name="primarilyWeeded" ngModel>
+                    <label class="form-check-label" for="primarily-weeded-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; ফসল কালিন সকল সময় জমি পরিষ্কার পরিচ্ছন্ন রাখা হয় কিনা-</span><br>
+                <span>At production Level, is the field keeps clean?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="production-level-yes" [value]=true
+                        name="productionLevelCleaned" ngModel>
+                    <label class="form-check-label" for="production-level-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="production-level-no" [value]=false
+                        name="productionLevelCleaned" ngModel>
+                    <label class="form-check-label" for="production-level-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আন্তঃপরিচর্যার সময় জমি ব্যবহৃত যন্ত্রপাতি ব্যবহারের আগে শোধন করা হয়েছিল কিনা-</span><br>
+                <span>Tools used for intercultural operation is treated by any purifying agent?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="purifying-agent-used-yes" [value]=true
+                        name="purifingAgentUsed" ngModel>
+                    <label class="form-check-label" for="purifying-agent-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="purifying-agent-used-no" [value]=false
+                        name="purifingAgentUsed" ngModel>
+                    <label class="form-check-label" for="purifying-agent-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; শোধনকৃত রাসায়নিকের নাম</span><br>
+                <span>Name of Treated Chemical?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-5">
+                    <input type="text" class="form-control" name="treatedChemicalName" ngModel>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------ 
+            Vegetable Weeding Box
+    -------------------------------------->
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="vegetale-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সবজি</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Vegetables</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; একই সাথে মিশ্রভাবে জমিতে সবজি করা হয়েছিল কিনা-</span><br>
+                <span>Did vegetables cultivated following mixed cropping technique?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="mixed-vegetables-yes" [value]=true
+                        name="vegetableCultivation" ngModel>
+                    <label class="form-check-label" for="mixed-vegetables-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="mixed-vegetables-no" [value]=false
+                        name="vegetableCultivation" ngModel>
+                    <label class="form-check-label" for="mixed-vegetables-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; মালচিং পেপার ব্যবহার করা হয়েছে কিনা-</span><br>
+                <span>Is there used Mulching Paper?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="mulching-paper-yes" [value]=true
+                        name="mulchingPaperUsed" ngModel>
+                    <label class="form-check-label" for="mulching-paper-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="mulching-paper-no" [value]=false
+                        name="mulchingPaperUsed" ngModel>
+                    <label class="form-check-label" for="mulching-paper-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পটল,লাউ, চিচিঙ্গা, কাকরোল, করলা, সীম জমিতে মাচা ব্যাবহার করা হয়েছে কিনা-</span><br>
+                <span>Does any support used above crop?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="support-used-yes" [value]=true name="supportUsed"
+                        ngModel>
+                    <label class="form-check-label" for="support-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="support-used-no" [value]=false name="supportUsed"
+                        ngModel>
+                    <label class="form-check-label" for="support-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সঠিক আলো বাতাস যাতায়তের ব্যবস্থা আছে কিনা-</span><br>
+                <span>Does available space for passing light and air?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="light-air-yes" [value]=true name="lightAndAir"
+                        ngModel>
+                    <label class="form-check-label" for="light-air-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="light-air-no" [value]=false name="lightAndAir"
+                        ngModel>
+                    <label class="form-check-label" for="light-air-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; মাঠে হাস মুরগি ও পশু নিয়ন্ত্রনের ব্যবস্থা আছে কিনা-</span><br>
+                <span>Does any protection to entry animal and duck?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="animal-protection-yes" [value]=true
+                        name="animalProtection" ngModel>
+                    <label class="form-check-label" for="animal-protection-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="animal-protection-no" [value]=false
+                        name="animalProtection" ngModel>
+                    <label class="form-check-label" for="animal-protection-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বেগুন এবং বাধাকপির জমিতে মালচিং পেপার ব্যবহার করা হয়েছে কিনা-</span><br>
+                <span>Is eggplant and cabbege field used Mulching Paper?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="eggplant-cabbege-mulching-yes" [value]=true
+                        name="isEggPlant" ngModel>
+                    <label class="form-check-label" for="eggplant-cabbege-mulching-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="eggplant-cabbege-mulching-no" [value]=false
+                        name="isEggPlant" ngModel>
+                    <label class="form-check-label" for="eggplant-cabbege-mulching-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বাগানে বেড়া দেয়া আছে কিনা-</span><br>
+                <span>Is fence used in the garden?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="fence-used-yes" [value]=true name="fenceUsed"
+                        ngModel>
+                    <label class="form-check-label" for="fence-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="fence-used-no" [value]=false name="fenceUsed"
+                        ngModel>
+                    <label class="form-check-label" for="fence-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বাগানে পরে থাকা পাতা ও আবর্জনা ফেলার নির্দিষ্ট স্থান আছে কিনা-</span><br>
+                <span>Is there any system to garbage fallen leaf and others wastage?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="waste-management-yes" [value]=true
+                        name="wasteManagement" ngModel>
+                    <label class="form-check-label" for="waste-management-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="waste-management-no" [value]=false
+                        name="wasteManagement" ngModel>
+                    <label class="form-check-label" for="waste-management-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------
+            Mango Weeding Box
+    ------------------------------>
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="mango-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">আম</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Mango</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আমের ক্ষেত্রে আগস্ট - সেপ্টেম্বর মাসে মরা ডাল পালা পরিষ্কার করা হয়েছে কিনা-</span><br>
+                <span>For mango garden, Were dead stems cleaning and pruning in the month of August - September?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="stem-removed-yes" [value]=true
+                        name="deadStemRemoved" ngModel>
+                    <label class="form-check-label" for="stem-removed-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="stem-removed-no" [value]=false
+                        name="deadStemRemoved" ngModel>
+                    <label class="form-check-label" for="stem-removed-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; চাষ দিয়ে আমের বাগানের আগাছা ভালো ভাবে পরিষ্কার করা হয়েছে কিনা-</span><br>
+                <span>Does keep the mango field clean by ploughing?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="ploughing-clean-yes" [value]=true name="doesClean"
+                        ngModel>
+                    <label class="form-check-label" for="ploughing-clean-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="ploughing-clean-no" [value]=false name="doesClean"
+                        ngModel>
+                    <label class="form-check-label" for="ploughing-clean-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আমের মুকুল বেশী আসার জন্য কোন হরমোন দেয়া হয়েছে কিনা-</span><br>
+                <span>Does any Hormone used for mango flowering?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="hormone-used-yes" [value]=true name="hormoneUsed"
+                        ngModel>
+                    <label class="form-check-label" for="hormone-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="hormone-used-no" [value]=false name="hormoneUsed"
+                        ngModel>
+                    <label class="form-check-label" for="hormone-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; মালচিং পেপার ব্যবহার করা হয়েছে কিনা-</span><br>
+                <span>Is there used Mulching Paper?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="mulching-mango-yes" [value]=true
+                        name="mulchingPaperUsedMango" ngModel>
+                    <label class="form-check-label" for="mulching-mango-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="mulching-mango-no" [value]=false
+                        name="mulchingPaperUsedMango" ngModel>
+                    <label class="form-check-label" for="mulching-mango-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বাগানে বেড়া দেয়া হয়েছে কিনা-</span><br>
+                <span>Is fence used in the garden?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="fence-mango-yes" [value]=true name="fenceUsedMango"
+                        ngModel>
+                    <label class="form-check-label" for="fence-mango-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="fence-mango-no" [value]=false name="fenceUsedMango"
+                        ngModel>
+                    <label class="form-check-label" for="fence-mango-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------------
+            Betel Leaf Weeding Box
+    ------------------------------------>
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="mango-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">পান</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Betel Leaf</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পানের ক্ষেত্রে জমি ছায়া যুক্ত কিন্তু স্যাঁতস্যাঁতে নয় বলে নিশ্চিত হয়েছিল কিনা-</span><br>
+                <span>For Betel Leaf Garden, is the land assured under shadow but not damp condition?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="shadow-damp-yes" [value]=true
+                        name="landShadowNotDamp" ngModel>
+                    <label class="form-check-label" for="shadow-damp-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="shadow-damp-no" [value]=false
+                        name="landShadowNotDamp" ngModel>
+                    <label class="form-check-label" for="shadow-damp-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পানের জমিতে সঠিক সময়ে সাপোর্ট দেয়া হয়েছে কিনা-</span><br>
+                <span>Did support used in betel leaf field proper time?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="betel-support-yes" [value]=true
+                        name="supportUsedBetel" ngModel>
+                    <label class="form-check-label" for="betel-support-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="betel-support-no" [value]=false
+                        name="supportUsedBetel" ngModel>
+                    <label class="form-check-label" for="betel-support-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; হাঁস মুরগি পশু পাখি নিয়ন্ত্রনের ব্যবস্থা আছে কিনা-</span><br>
+                <span>Is there facilities to control duck hen cows and birds?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="betel-animal-protection-yes" [value]=true
+                        name="animalProtectionBetel" ngModel>
+                    <label class="form-check-label" for="betel-animal-protection-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="betel-animal-protection-no" [value]=false
+                        name="animalProtectionBetel" ngModel>
+                    <label class="form-check-label" for="betel-animal-protection-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পানের জমিতে ভিজিটর প্রবেশ নিয়ন্ত্রন করা হয় কিনা-</span><br>
+                <span>Did the visitor prohibited to entry the garden?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="visitor-prohibition-yes" [value]=true
+                        name="prohibitedEntry" ngModel>
+                    <label class="form-check-label" for="visitor-prohibition-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="visitor-prohibition-no" [value]=false
+                        name="prohibitedEntry" ngModel>
+                    <label class="form-check-label" for="visitor-prohibition-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
