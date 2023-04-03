@@ -1,0 +1,381 @@
+<form #fertilizingForm="ngForm" (ngSubmit)="onSubmitFertilizerAndFertilizing(fertilizingForm.value)">
+    <div id="fertilizer-and-fertilizing-page" class="border border-secondary bg-light m-5 p-2">
+        <div id="fertilizer-and-fertilizing-box">
+            <h2 class="text-center fs-3">
+                ৫. সার ও সার প্রয়োগ<br>
+                5. Fertilizer and Fertilizing
+            </h2>
+        </div>
+        <hr>
+        <div id="irrigation-source-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">জমি তৈয়ারের সময়</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Fertilizers used at the time of land preparation</span>
+                </div>
+            </div>
+        </div>
+        <div class="row single-info-line mt-4 mb-2">
+            <div class="form-check col-md-6 col-lg-8 col-xl-8 col-xxl-9">
+                <span>&#x2022; জমিতে কোন সময় সার প্রয়োগ করা হয়েছিল-</span><br>
+                <span>Which time of the day fertilizing was done?</span>
+            </div>
+            <div class="flex-container gap-4 col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="fertilizing-time-morning" value="Morning"
+                        name="fertilizingTime" ngModel>
+                    <label class="form-check-label" for="fertilizing-time-morning">
+                        <span> সকাল <br>
+                            Morning</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input col" type="radio" id="fertilizing-time-noon" value="Noon"
+                        name="fertilizingTime" ngModel>
+                    <label class="form-check-label" for="fertilizing-time-Noon">
+                        <span>দুপুর<br>
+                            Noon</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="fertilizing-time-evening" value="Evening"
+                        name="fertilizingTime" ngModel>
+                    <label class="form-check-label" for="fertilizing-time-Evening">
+                        <span> বিকাল<br>
+                            Evening</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; জমি তৈয়ার করার সময় কোনো সার প্রয়োগ করা হয়েছে কিনা-</span><br>
+                <span>Is there any fertilizer used at thetime of land preparation?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="fertilizer-used-yes" [value]=true
+                        name="isFertilizerUsed" ngModel>
+                    <label class="form-check-label" for="fertilizer-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="fertilizer-used-no" [value]=false
+                        name="isFertilizerUsed" ngModel>
+                    <label class="form-check-label" for="fertilizer-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="fertilizer-types-inputs" class="row m-2">
+            <div id="single-input-field" class="col">
+                <span>সারের ধরন:<br>
+                    Fertilizer type:</span>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="fertilizer-type-chemical" type="checkbox" name="chemical"
+                    [(ngModel)]="checkedFertilizers.Chemical"
+                    (change)="onFertilizerSelectionChange($event, 'Chemical')">
+                <label class="form-check-label" for="fertilizer-type-chemical">
+                    <span>রাসায়নিক<br>
+                        Chemical</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="fertilizer-type-organic" type="checkbox" name="organic"
+                    [(ngModel)]="checkedFertilizers.Organic" (change)="onFertilizerSelectionChange($event, 'Organic')">
+                <label class="form-check-label" for="fertilizer-type-organic">
+                    <span> জৈব <br>
+                        Organic</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="fertilizer-type-biofertilizer" type="checkbox" name="bio-fertilizer"
+                    [(ngModel)]="checkedFertilizers.Biofertilizer"
+                    (change)="onFertilizerSelectionChange($event, 'Bio fertilizer')">
+                <label class="form-check-label" for="fertilizer-type-biofertilizer">
+                    <span>বায়োফার্টিলাইজার<br>
+                        Bio fertilizer</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------------
+            Name of Fertilizer and Quantity
+    --------------------------------------------->
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="fertilizer-and-quantity-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সারের নাম ও পরিমাণ</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Name of Fertilizer and Quantity</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="d-flex d-flex justify-content-evenly row">
+                <div class="form-check col ms-5 pe-0">
+                    <input class="form-check-input" type="checkbox" [value]=true name="isUreaUsed" ngModel>
+                    <label class="form-check-label" for="urea">
+                        <span>ইউরিয়া<br>
+                            Urea</span>
+                    </label>
+                </div>
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">পরিমান<br>
+                        Amount</span>
+                    <input type="number" class="form-control" name="ureaQuantity" ngModel>
+                    <span class="input-group-text">কেজি<br>
+                        KG</span>
+                </div>
+            </div>
+            <div class="d-flex d-flex justify-content-evenly row">
+                <div class="form-check col ms-5 pe-0">
+                    <input class="form-check-input" type="checkbox" [value]=true name="isPotashUsed" ngModel>
+                    <label class="form-check-label" for="potash">
+                        <span>পটাশ<br>
+                            Potash</span>
+                    </label>
+                </div>
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">পরিমান<br>
+                        Amount</span>
+                    <input type="number" class="form-control" name="potashQuantity" ngModel>
+                    <span class="input-group-text">কেজি<br>
+                        KG</span>
+                </div>
+            </div>
+            <div class="d-flex d-flex justify-content-evenly row">
+                <div class="form-check col ms-5 pe-0">
+                    <input class="form-check-input" type="checkbox" [value]=true name="isOrganicUsed" ngModel>
+                    <label class="form-check-label" for="organic">
+                        <span> জৈব সার<br>
+                            Organic</span>
+                    </label>
+                </div>
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">পরিমান<br>
+                        Amount</span>
+                    <input type="number" class="form-control" name="organicQuantity" ngModel>
+                    <span class="input-group-text">কেজি<br>
+                        KG</span>
+                </div>
+            </div>
+            <div class="d-flex d-flex justify-content-evenly row">
+                <div class="form-check col ms-5 pe-0">
+                    <input class="form-check-input" type="checkbox" [value]=true name="isCowDungUsed" ngModel>
+                    <label class="form-check-label" for="cow-dung">
+                        <span> গোবর সার<br>
+                            Cow dung</span>
+                    </label>
+                </div>
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">পরিমান<br>
+                        Amount</span>
+                    <input type="number" class="form-control" name="cowDungQuantity" ngModel>
+                    <span class="input-group-text">কেজি<br>
+                        KG</span>
+                </div>
+            </div>
+            <div class="d-flex d-flex justify-content-evenly row">
+                <div class="form-check col ms-5 pe-0">
+                    <input class="form-check-input" type="checkbox" [value]=true name="isCowDungUsed" ngModel>
+                    <label class="form-check-label" for="cow-dung">
+                        <span> গোবর সার<br>
+                            Cow dung</span>
+                    </label>
+                </div>
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">পরিমান<br>
+                        Amount</span>
+                    <input type="number" class="form-control" name="cowDungQuantity" ngModel>
+                    <span class="input-group-text">কেজি<br>
+                        KG</span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-evenly row">
+                <div class="form-check col ms-5 pe-0">
+                    <input class="form-check-input" type="checkbox" [value]=true name="isPhosphorusUsed" ngModel>
+                    <label class="form-check-label" for="phosphorus">
+                        <span> ফসফরাস<br>
+                            Phosphorus</span>
+                    </label>
+                </div>
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">পরিমান<br>
+                        Amount</span>
+                    <input type="number" class="form-control" name="phosphorusQuantity" ngModel>
+                    <span class="input-group-text">কেজি<br>
+                        KG</span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-evenly row">
+                <div class="form-check col ms-5 pe-0">
+                    <input class="form-check-input" type="checkbox" [value]=true name="isOtherUsed" ngModel>
+                    <label class="form-check-label" for="other-fertilizer">
+                        <span> অন্যান্য<br>
+                            Others</span>
+                    </label>
+                </div>
+                <div class="input-group mb-3 me-5 col">
+                    <span class="input-group-text">পরিমান<br>
+                        Amount</span>
+                    <input type="number" class="form-control" name="otherQuantity" ngModel>
+                    <span class="input-group-text">কেজি<br>
+                        KG</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------------------
+        Fertilizing at the time of plant growth 
+    ------------------------------------------------>
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="fertilizer-plant-growth-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">ফসলকালীন সময় সার প্রয়োগ</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Name of Fertilizer and Quantity</span>
+                </div>
+            </div>
+        </div>
+        <div id="fertilizer-types-inputs" class="row row-gap-3 m-2">
+            <div id="single-input-field" class="col-lg-12">
+                <span>&#x2022; কোন কোন সার দেয়া হয়েছে-<br>
+                    Applied Fertilizers-</span>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="applied-fertilizer-urea" type="checkbox" name="urea"
+                    [(ngModel)]="checkedAppliedFertilizers.Urea" value="Urea">
+                <label class="form-check-label" for="applied-fertilizer-urea">
+                    <span>ইউরিয়া<br>
+                        Urea</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="applied-fertilizer-potash" type="checkbox" name="potash"
+                    [(ngModel)]="checkedAppliedFertilizers.Potash" value="Potash">
+                <label class="form-check-label" for="applied-fertilizer-potash">
+                    <span>পটাশ<br>
+                        Potash</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="applied-fertilizer-phosphorus" type="checkbox" name="phosphorus"
+                    [(ngModel)]="checkedAppliedFertilizers.Phosphorus" value="Phosphorus">
+                <label class="form-check-label" for="applied-fertilizer-phosphorus">
+                    <span>ফসফরাস<br>
+                        Phosphorus</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="applied-fertilizer-zinc" type="checkbox" name="zinc"
+                    [(ngModel)]="checkedAppliedFertilizers.Zinc" value="Zinc">
+                <label class="form-check-label" for="applied-fertilizer-zinc">
+                    <span>জিংক<br>
+                        Zinc</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="applied-fertilizer-zinc" type="checkbox" name="others"
+                    (change)="EnableFertilizerField($event)">
+                <label class="form-check-label" for="applied-fertilizer-others">
+                    <span>অন্যান্য<br>
+                        Others</span>
+                </label>
+                <input class="mt-2" id="company-name" type="text" name="otherFertilizerUsed"
+                    [disabled]="isOtherFertilizersDisabled " ngModel>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------
+        Total Number of Application and Quantity
+    -------------------------------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="total-fertilizer-application-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">মোট সার প্রয়োগের সংখ্যা</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Name of Fertilizer and Quantity</span>
+                </div>
+            </div>
+        </div>
+        <div class="row m-4">
+            <div id="single-input-field" class="col">
+                <label for="vegetable-apllication-number">
+                    <span class="mt-2">সবজি<br>
+                        Vegetable</span>
+                </label>
+                <input class="mt-2 text-box" id="contract-area" type="number" ngModel name="vegetable">
+            </div>
+            <div id="single-input-field" class="col">
+                <label for="mango-apllication-number">
+                    <span class="mt-2">আম<br>
+                        Mango</span>
+                </label>
+                <input class="mt-2 text-box" id="contract-area" type="number" ngModel name="mango">
+            </div>
+            <div id="single-input-field" class="col">
+                <label for="betelleaf-apllication-number">
+                    <span class="mt-2">পান<br>
+                        Betel Leaf</span>
+                </label>
+                <input class="mt-2 text-box" id="contract-area" type="number" ngModel name="betelLeaf">
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------
+        Time of Fertilizer Application and Quantity
+    ------------------------------------------------------->
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="fertilizer-plant-growth-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সার প্রয়োগের সময় এবং পরিমাণ</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Time of Fertilizer Application and Quantity</span>
+                </div>
+            </div>
+        </div>
+        <div class="m-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <ng-container *ngFor="let head of tableHead">
+                            <th scope="col" class="text-center">{{head}}</th>
+                        </ng-container>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <ng-container *ngFor="let item of tableData">
+                            <td><input type="number" [(ngModel)]="item.column1"></td>
+                        </ng-container>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

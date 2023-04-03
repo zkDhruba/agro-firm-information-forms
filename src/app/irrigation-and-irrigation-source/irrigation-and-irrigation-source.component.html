@@ -1,0 +1,708 @@
+<form #irrigationSourceForm="ngForm" (ngSubmit)="onSubmitIrrigationSource(irrigationSourceForm.value)">
+    <div id="irrigation-and-irrigation-source-page" class="border border-secondary bg-light m-5 p-2">
+        <div id="irrigation-and-irrigation-source-box">
+            <h2 class="text-center fs-3">
+                ৩. সেচ ও সেচ পানির উৎস<br>
+                3. Irrigation and Irrigation Source
+            </h2>
+        </div>
+        <hr>
+        <div id="irrigation-source-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">পানির উৎস</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Water Source</span>
+                </div>
+            </div>
+        </div>
+        <div id="water-source-inputs" class="row m-2">
+            <div class="form-check col">
+                <input class="form-check-input" id="river-water-source" type="checkbox" name="water-source-river" [(ngModel)]="checkedIrrigationWaterSource.River" value="River">
+                <label class="form-check-label" for="river-water-source">
+                    <span>নদীর পানি<br>
+                        River</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="pond-water-source" type="checkbox" name="water-source-pond" [(ngModel)]="checkedIrrigationWaterSource.Pond" value="Pond">
+                <label class="form-check-label" for="pond-water-source">
+                    <span>পুকুরের পানি<br>
+                        Pond</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="tubewell-water-source" type="checkbox" name="water-source-tubewell" [(ngModel)]="checkedIrrigationWaterSource.TubeWell" value="Tube Well">
+                <label class="form-check-label" for="tubewell-water-source">
+                    <span>টিউবওয়েল<br>
+                        Tubewell</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="municipality-water-source" type="checkbox" name="water-source-municipality" [(ngModel)]="checkedIrrigationWaterSource.Municipality" value="Municipality">
+                <label class="form-check-label" for="municipality-water-source">
+                    <span>সিটি করপোরেশন<br>
+                        Municipality</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="deep-tubewell-water-source" type="checkbox" name="water-source-deep-tubewell" [(ngModel)]="checkedIrrigationWaterSource.DeepTubeWell" value="Deep Tube Well">
+                <label class="form-check-label" for="deep-tubewell-water-source">
+                    <span>গভীর নলকূপ<br>
+                        Deep Tubewell</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" id="rain-water-source" type="checkbox" name="water-source-rain" [(ngModel)]="checkedIrrigationWaterSource.RainWater" value="Rain Water">
+                <label class="form-check-label" for="rain-water-source">
+                    <span>বৃষ্টির পানি<br>
+                        Rain Water</span>
+                </label>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পানির উৎস দূশ্নমুক্ত কিনা-</span><br>
+                <span>Is the source of irrigation free from pollution?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="pollution-free-yes" [value]=true
+                        name="pollutionFree" ngModel>
+                    <label class="form-check-label" for="pollution-free-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="pollution-free-no" [value]=false
+                        name="pollutionFree" ngModel>
+                    <label class="form-check-label" for="pollution-free-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পানি পরীক্ষা করা হয়েছে কিনা-</span><br>
+                <span>Is the source of water tested?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="tested-source-yes" [value]=true
+                        name="testedSource" ngModel>
+                    <label class="form-check-label" for="tested-source-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="tested-source-no" [value]=false
+                        name="testedSource" ngModel>
+                    <label class="form-check-label" for="tested-source-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পানের ক্ষেত্রে, সেচের পানি স্যালমোনেলা বা অন্যান্য ক্ষতিকর ব্যাকটেরিয়া সংক্রামিত কিনা-</span><br>
+                <span>For Betel Leaf, Is Irrigation water source infected by salmonella or any other harmful bacterica?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="infected-yes" [value]=true
+                        name="infected" ngModel>
+                    <label class="form-check-label" for="infected-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="infected-no" [value]=false
+                        name="infected" ngModel>
+                    <label class="form-check-label" for="infected-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সেচের পানি জমিতে দেয়ার আগে পানির সংক্রামিত মাইক্রো অরগানিজম মারার জন্য শোধক ব্যবহার করা হইয়াছে কিনা-</span><br>
+                <span>Before irrigated the land from the irrigation source, is any purifying agent used for killing of infected microorganisms?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="is-purifined-yes" [value]=true
+                        name="isPurifined" ngModel>
+                    <label class="form-check-label" for="is-purifined-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="is-purifined-no" [value]=false
+                        name="isPurifined" ngModel>
+                    <label class="form-check-label" for="is-purifined-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row single-info-line mt-2 mb-2">
+            <div class="flex-container form-check col text-center" id="purifying-agent">
+                <label for="purifying-agent">
+                    <span class="mt-2">&#x2022; ব্যবহার করে থাকলে শোধকের নাম<br>
+                        If used, Name of purifying agent</span>
+                </label>
+                <input class="mt-2 text-box" id="variety" type="text" ngModel name="purifyingAgent">
+            </div>
+            <div class="flex-container form-check col text-center">
+                <label for="purifying-agent-local">
+                    <span class="mt-2"> লোকাল নাম<br>
+                        Local Name</span>
+                </label>
+                <input class="mt-2 text-box" id="purifying-agent-local" type="text" ngModel name="localName">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="flex-container form-check col" id="purifying-agent">
+                    <span class="mt-2">&#x2022; শোধকটির উৎস:<br>
+                        Source of purifying agent:</span>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="radio" id="inorganic" value="Inorganic" name="sourceType" ngModel>
+                <label class="form-check-label" for="inorganic">
+                    <span>অজৈব <br>
+                        Inorganic</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="radio" id="organic" value="Organic" name="sourceType"
+                    ngModel>
+                <label class="form-check-label" for="organic">
+                    <span>জৈব <br>
+                        Organic</span>
+                </label>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; শোধকটি মানবদেহের জন্য ক্ষতিকর কিনা-</span><br>
+                <span>Does used purifying agent have any deleterous effect on human body?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="bad-effect-yes" [value]=true
+                        name="badEffectHuman" ngModel>
+                    <label class="form-check-label" for="bad-effect-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="bad-effect-no" [value]=false
+                        name="badEffectHuman" ngModel>
+                    <label class="form-check-label" for="bad-effect-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পানিতে ক্ষতিকর ধাতব মেটাল আছে কিনা-</span><br>
+                <span>Is there any heavy metal present on water source?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="heavy-metal-yes" [value]=true
+                        name="isHeavyMetalPresent" ngModel>
+                    <label class="form-check-label" for="heavy-metal-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="heavy-metal-no" [value]=false
+                        name="isHeavyMetalPresent" ngModel>
+                    <label class="form-check-label" for="heavy-metal-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; গ্রুপের সকল জমি একসাথে সেচ দেয়া হয়েছিল কিনা-</span><br>
+                <span>Does all the land of plot irrigated same time?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="irrigate-sametime-yes" [value]=true
+                        name="irrigationSameTime" ngModel>
+                    <label class="form-check-label" for="irrigate-sametime-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="irrigate-sametime-no" [value]=false
+                        name="irrigationSameTime" ngModel>
+                    <label class="form-check-label" for="irrigate-sametime-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row single-info-line mt-2 mb-2">
+            <div class="form-check col-9">
+                <span>&#x2022; যদি না করা হয়ে থাকে তবে গড় পার্থক্য কত দিন ছিল?</span><br>
+                <span>If not how many days were different?</span>
+            </div>
+            <div class="flex-container gap-3 col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="irrigation-time-diff-2" [value]=2
+                        name="differentIrrigationTime" ngModel>
+                    <label class="form-check-label" for="irrigation-time-diff-2">
+                        <span> ২ দিন <br>
+                            2 days</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input col" type="radio" id="irrigation-time-diff-3" [value]=3
+                        name="differentIrrigationTime" ngModel>
+                    <label class="form-check-label" for="irrigation-time-diff-3">
+                        <span>৩ দিন<br>
+                            3 days</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="irrigation-time-diff-4" [value]=4
+                        name="differentIrrigationTime" ngModel>
+                    <label class="form-check-label" for="irrigation-time-diff-4">
+                        <span>৪ দিন<br>
+                            4 days</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="irrigation-time-diff-7" [value]=7
+                        name="differentIrrigationTime" ngModel>
+                    <label class="form-check-label" for="irrigation-time-diff-7">
+                        <span>৭ দিন<br>
+                            7 days</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বপন বা রোপনের কতদিন পর প্রথম সেচ দেয়া হয়েছিল?</span><br>
+                <span>After how many days of sowing or transplanting first irrigation has applied?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-5">
+                    <input type="number" class="form-control" name="irrigation1" ngModel>
+                    <span class="input-group-text">দিন<br>
+                        Day(s)</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বপন বা রোপনের কতদিন পর দ্বিতীয় সেচ দেয়া হয়েছিল?</span><br>
+                <span>After how many days of sowing or transplanting second irrigation has applied?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-5">
+                    <input type="number" class="form-control" name="irrigation2" ngModel>
+                    <span class="input-group-text">দিন<br>
+                        Day(s)</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বপন বা রোপনের কতদিন পর তৃতীয় সেচ দেয়া হয়েছিল?</span><br>
+                <span>After how many days of sowing or transplanting third irrigation has applied?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-5">
+                    <input type="number" class="form-control" name="irrigation3" ngModel>
+                    <span class="input-group-text">দিন<br>
+                        Day(s)</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বপন বা রোপনের কতদিন পর চতুর্থ সেচ দেয়া হয়েছিল?</span><br>
+                <span>After how many days of sowing or transplanting fourth irrigation has applied?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-5">
+                    <input type="number" class="form-control" name="irrigation4" ngModel>
+                    <span class="input-group-text">দিন<br>
+                        Day(s)</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বপন বা রোপনের কতদিন পর পঞ্চম সেচ দেয়া হয়েছিল?</span><br>
+                <span>After how many days of sowing or transplanting fifth irrigation has applied?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-5">
+                    <input type="number" class="form-control" name="irrigation5" ngModel>
+                    <span class="input-group-text">দিন<br>
+                        Day(s)</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; ফসল রোপন অথবা পরিচর্যা থেকে শুরু করে সংগ্রহ করার পূর্ব পর্যন্ত কতবার জমিতে সেচ দেয়া হয়েছে?</span><br>
+                <span>How many times the field was irrigated between the time of transplanting and harvesting of crop?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-5">
+                    <input type="number" class="form-control" name="totalIrrigation" ngModel>
+                    <span class="input-group-text">বার</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সেচের পানিতে পশু পাখি বিচরন করে কিনা?</span><br>
+                <span>Are there any birds or animals roaming on irrigation source?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="animal-roaming-yes" [value]=true
+                        name="animalRoaming" ngModel>
+                    <label class="form-check-label" for="animal-roaming-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="animal-roaming-no" [value]=false
+                        name="animalRoaming" ngModel>
+                    <label class="form-check-label" for="animal-roaming-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সেচ পানির উৎসের নিকট ক্ষতিকর রাসায়নিক বস্তু তৈরি করা হয় কিনা-</span><br>
+                <span>Is there any industry exists nearby irrigation source?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="industry-nearby-yes" [value]=true
+                        name="industryNearBy" ngModel>
+                    <label class="form-check-label" for="industry-nearby-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="industry-nearby-no" [value]=false
+                        name="industryNearBy" ngModel>
+                    <label class="form-check-label" for="industry-nearby-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; জমিতে সেচের জন্য সুয়েজ পানি ব্যবহার করা হয় কিনা-</span><br>
+                <span>Is sewage water applied for irrigating the field?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="sewage-used-yes" [value]=true
+                        name="sewageWaterUsed" ngModel>
+                    <label class="form-check-label" for="sewage-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="sewage-used-no" [value]=false
+                        name="sewageWaterUsed" ngModel>
+                    <label class="form-check-label" for="sewage-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; যদি উৎস ট্যাঙ্ক হয় তবে তা জীবানুমুক্ত করা হয়েছে কিনা-</span><br>
+                <span>If water tank is the irrigation source, was it disinfected?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="tank-disinfection-yes" [value]=true
+                        name="tankDisinfection" ngModel>
+                    <label class="form-check-label" for="tank-disinfection-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="tank-disinfection-no" [value]=false
+                        name="tankDisinfection" ngModel>
+                    <label class="form-check-label" for="tank-disinfection-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; উপরোক্ত প্রক্রিয়ায় স্থানীয় কৃষি বিভাগের সহযোগিতা নেওয়া হয়েছে কিনা-</span><br>
+                <span>Any cooperation's taken from Local Department of Agricultural Extension?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="taken-cooperation-yes" [value]=true
+                        name="takenCooperation" ngModel>
+                    <label class="form-check-label" for="taken-cooperation-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="taken-cooperation-no" [value]=false
+                        name="takenCooperation" ngModel>
+                    <label class="form-check-label" for="taken-cooperation-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row single-info-line mt-2 mb-2">
+            <div class="form-check col-9">
+                <span>&#x2022; কোন সময় জমিতে সেচ দেয়া হয়ে থাকে?</span><br>
+                <span>Which time of the day irrigation applied?</span>
+            </div>
+            <div class="flex-container gap-4 col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="irrigation-time-morning" value="Morning"
+                        name="arrigationTime" ngModel>
+                    <label class="form-check-label" for="irrigation-time-diff-2">
+                        <span> সকাল <br>
+                            Morning</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input col" type="radio" id="irrigation-time-noon" value="Noon"
+                        name="arrigationTime" ngModel>
+                    <label class="form-check-label" for="irrigation-time-diff-3">
+                        <span>দুপুর<br>
+                            Noon</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="irrigation-time-evening" value="Evening"
+                        name="arrigationTime" ngModel>
+                    <label class="form-check-label" for="irrigation-time-diff-4">
+                        <span> বিকাল<br>
+                            Evening</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; রাসায়নিক ও অন্যান্য সার গুদামজাত করার সময় কৃষি বিভাগের কর্মকর্তার পরামর্শ নেয়া হয় কিনা-</span><br>
+                <span>Is there any suggestion taken from Local Department of Agricultural Extension storing of chemical or any other fertilizers?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="suggestion-taken-yes" [value]=true
+                        name="suggestionTaken" ngModel>
+                    <label class="form-check-label" for="suggestion-taken-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="suggestion-taken-no" [value]=false
+                        name="suggestionTaken" ngModel>
+                    <label class="form-check-label" for="suggestion-taken-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------
+            Irrigation Method Box
+    ----------------------------------->
+    
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="irrigation-method-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সেচ পদ্ধতি</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Irrigation Method</span>
+                </div>
+            </div>
+        </div>
+        <div class="row single-info-line mt-4 mb-2">
+            <div class="form-check col ms-4">
+                <input class="form-check-input" type="radio" id="method-other" value="Flood" name="irrigationMethod" (click)="EnableOtherMethod($event)" ngModel>
+                <label class="form-check-label" for="method-flood">
+                    <span>প্লাবন<br>
+                        Flood</span>
+                </label>
+            </div>
+            <div class="form-check col ms-4">
+                <input class="form-check-input" type="radio" id="method-other" value="Deep" name="irrigationMethod" (click)="EnableOtherMethod($event)" ngModel>
+                <label class="form-check-label" for="method-deep">
+                    <span>ডিপ<br>
+                        Deep</span>
+                </label>
+            </div>
+            <div class="form-check col ms-4">
+                <input class="form-check-input" type="radio" id="method-other" value="Furrow"  name="irrigationMethod" (click)="EnableOtherMethod($event)" ngModel>
+                <label class="form-check-label" for="method-furrow">
+                    <span>নালা<br>
+                        Furrow</span>
+                </label>
+            </div>
+            <div class="form-check col ms-4">
+                <input class="form-check-input" type="radio" id="method-other" value="Other Method"  name="irrigationMethod" (click)="DisableOtherMethod($event)" ngModel>
+                <label class="form-check-label" for="method-other">
+                    <span>অন্যান্য<br>
+                        Other</span>
+                </label>
+            </div>
+            <div class="col text-center" id="company-name-detail">
+                <label for="seed-source">
+                    <span class="mt-2">পদ্ধতির নাম:<br>
+                        Method Name:</span>
+                </label>
+                <input class="mt-2 text-box" id="company-name" type="text" name="otherMethod" [disabled]="isOtherMethodDisabled" ngModel>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------
+            Drainage Facilities Box
+    ---------------------------------------->
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="drainage-facilities-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">নিষ্কাশন ব্যাবস্থা</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Drainage Facilities</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সঠিক নিষ্কাশন ব্যাবস্থা আছে কিনা-</span><br>
+                <span>Have proper drainage facility?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="proper-drainage-yes" [value]=true
+                        name="poperDrainage" ngModel>
+                    <label class="form-check-label" for="proper-drainage-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="proper-drainage-no" [value]=false
+                        name="poperDrainage" ngModel>
+                    <label class="form-check-label" for="proper-drainage-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; জমিতে অতিরিক্ত পানি বের করা হয়েছে কিনা-</span><br>
+                <span>Did excess amount of water have drained out from the field?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="excesswater-drainage-yes" [value]=true
+                        name="excessWaterDrainage" ngModel>
+                    <label class="form-check-label" for="excesswater-drainage-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="excesswater-drainage-no" [value]=false
+                        name="excessWaterDrainage" ngModel>
+                    <label class="form-check-label" for="excesswater-drainage-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

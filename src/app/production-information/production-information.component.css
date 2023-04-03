@@ -1,0 +1,25 @@
+.text-box {
+    height: 35px;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+#organic-fertilizer-question {
+    position: relative;
+    margin: 0;
+    right: 10px;
+}
+
+#kg{
+    position: relative;
+    left: 10px;
+}
+
+#kg, #variety, #amount {
+    display: inline-block;
+}
