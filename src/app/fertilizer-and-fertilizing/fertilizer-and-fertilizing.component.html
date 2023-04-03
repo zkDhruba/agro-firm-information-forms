@@ -80,24 +80,29 @@
                     Fertilizer type:</span>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" id="fertilizer-type-chemical" type="checkbox" name="chemical" [(ngModel)]="checkedFertilizers.Chemical" value="Chemical">
+                <input class="form-check-input" id="fertilizer-type-chemical" type="checkbox" name="chemical"
+                    [(ngModel)]="checkedFertilizers.Chemical"
+                    (change)="onFertilizerSelectionChange($event, 'Chemical')">
                 <label class="form-check-label" for="fertilizer-type-chemical">
                     <span>রাসায়নিক<br>
                         Chemical</span>
                 </label>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" type="checkbox" name="organic" [(ngModel)]="checkedFertilizers.Organic" value="Organic"  id="fertilizer-type-organic">
+                <input class="form-check-input" id="fertilizer-type-organic" type="checkbox" name="organic"
+                    [(ngModel)]="checkedFertilizers.Organic" (change)="onFertilizerSelectionChange($event, 'Organic')">
                 <label class="form-check-label" for="fertilizer-type-organic">
                     <span> জৈব <br>
                         Organic</span>
                 </label>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" type="checkbox" name="bio-fertilizer" [(ngModel)]="checkedFertilizers.Biofertilizer" value="Bio fertilizer" id="fertilizer-type-biofertilizer">
+                <input class="form-check-input" id="fertilizer-type-biofertilizer" type="checkbox" name="bio-fertilizer"
+                    [(ngModel)]="checkedFertilizers.Biofertilizer"
+                    (change)="onFertilizerSelectionChange($event, 'Bio fertilizer')">
                 <label class="form-check-label" for="fertilizer-type-biofertilizer">
                     <span>বায়োফার্টিলাইজার<br>
-                        Biofertilizer</span>
+                        Bio fertilizer</span>
                 </label>
             </div>
         </div>
@@ -253,40 +258,46 @@
                     Applied Fertilizers-</span>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" id="applied-fertilizer-urea" type="checkbox" name="urea" [(ngModel)]="checkedAppliedFertilizers.Urea" value="Urea">
+                <input class="form-check-input" id="applied-fertilizer-urea" type="checkbox" name="urea"
+                    [(ngModel)]="checkedAppliedFertilizers.Urea" value="Urea">
                 <label class="form-check-label" for="applied-fertilizer-urea">
                     <span>ইউরিয়া<br>
                         Urea</span>
                 </label>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" id="applied-fertilizer-potash" type="checkbox" name="potash" [(ngModel)]="checkedAppliedFertilizers.Potash" value="Potash">
+                <input class="form-check-input" id="applied-fertilizer-potash" type="checkbox" name="potash"
+                    [(ngModel)]="checkedAppliedFertilizers.Potash" value="Potash">
                 <label class="form-check-label" for="applied-fertilizer-potash">
                     <span>পটাশ<br>
                         Potash</span>
                 </label>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" id="applied-fertilizer-phosphorus" type="checkbox" name="phosphorus" [(ngModel)]="checkedAppliedFertilizers.Phosphorus" value="Phosphorus">
+                <input class="form-check-input" id="applied-fertilizer-phosphorus" type="checkbox" name="phosphorus"
+                    [(ngModel)]="checkedAppliedFertilizers.Phosphorus" value="Phosphorus">
                 <label class="form-check-label" for="applied-fertilizer-phosphorus">
                     <span>ফসফরাস<br>
                         Phosphorus</span>
                 </label>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" id="applied-fertilizer-zinc" type="checkbox" name="zinc" [(ngModel)]="checkedAppliedFertilizers.Zinc" value="Zinc">
+                <input class="form-check-input" id="applied-fertilizer-zinc" type="checkbox" name="zinc"
+                    [(ngModel)]="checkedAppliedFertilizers.Zinc" value="Zinc">
                 <label class="form-check-label" for="applied-fertilizer-zinc">
                     <span>জিংক<br>
                         Zinc</span>
                 </label>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" id="applied-fertilizer-zinc" type="checkbox" name="others" (change)="EnableFertilizerField($event)">
+                <input class="form-check-input" id="applied-fertilizer-zinc" type="checkbox" name="others"
+                    (change)="EnableFertilizerField($event)">
                 <label class="form-check-label" for="applied-fertilizer-others">
                     <span>অন্যান্য<br>
                         Others</span>
                 </label>
-                <input class="mt-2" id="company-name" type="text" name="otherFertilizerUsed" [disabled]="isOtherFertilizersDisabled " ngModel>
+                <input class="mt-2" id="company-name" type="text" name="otherFertilizerUsed"
+                    [disabled]="isOtherFertilizersDisabled " ngModel>
             </div>
         </div>
     </div>
@@ -308,22 +319,27 @@
         <div class="row m-4">
             <div id="single-input-field" class="col">
                 <label for="vegetable-apllication-number">
+<<<<<<< HEAD
                         <span class="mt-2">সবজি<br>
                             Vegetable</span>
+=======
+                    <span class="mt-2">সবজি<br>
+                        Vegetable</span>
+>>>>>>> fbdcce5a52ceaa5179556845e7acb05a9d168ee6
                 </label>
                 <input class="mt-2 text-box" id="contract-area" type="number" ngModel name="vegetable">
             </div>
             <div id="single-input-field" class="col">
                 <label for="mango-apllication-number">
-                        <span class="mt-2">আম<br>
-                            Mango</span>
+                    <span class="mt-2">আম<br>
+                        Mango</span>
                 </label>
                 <input class="mt-2 text-box" id="contract-area" type="number" ngModel name="mango">
             </div>
             <div id="single-input-field" class="col">
                 <label for="betelleaf-apllication-number">
-                        <span class="mt-2">পান<br>
-                            Betel Leaf</span>
+                    <span class="mt-2">পান<br>
+                        Betel Leaf</span>
                 </label>
                 <input class="mt-2 text-box" id="contract-area" type="number" ngModel name="betelLeaf">
             </div>
@@ -344,22 +360,25 @@
             </div>
         </div>
         <div class="m-4">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <ng-container *ngFor="let head of tableHead">
-                        <th scope="col" class="text-center">{{head}}</th>
-                    </ng-container>
-                  </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <ng-container *ngFor="let item of tableData">
-                            <td><input type="number" [(ngModel)]="item.column1"></td>
-                        </ng-container>
-                    </tr>
-                </tbody>
-              </table>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center" *ngFor="let head of tableHead">{{ head }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of rowData; let i = index">
+                            <td class="text-center">Dose {{ i + 1 }}</td>
+                            <td><input type="number" [(ngModel)]="row.urea" name="urea{{ i + 1 }}"></td>
+                            <td><input type="number" [(ngModel)]="row.phosphorus" name="phosphorus{{ i + 1 }}"></td>
+                            <td><input type="number" [(ngModel)]="row.potash" name="potash{{ i + 1 }}"></td>
+                            <td><input type="number" [(ngModel)]="row.zinc" name="zinc{{ i + 1 }}"></td>
+                            <td><input type="number" [(ngModel)]="row.others" name="others{{ i + 1 }}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
