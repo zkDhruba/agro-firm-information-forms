@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InterculturalOperationDataService {
 
-  IOGetUrl = 'https://modern-pink-trench-coat.cyclic.app/api/intercultural-operation/'
+  IOGetUrl = 'https://modern-pink-trench-coat.cyclic.app/api/intercultural-operation/6427a984c7179916780c5de8'
   IOPostUrl = 'https://modern-pink-trench-coat.cyclic.app/api/intercultural-operation/add'
 
   constructor(private http:HttpClient) { }
