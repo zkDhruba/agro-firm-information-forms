@@ -11,7 +11,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { ProductionInformationComponent } from './production-information/production-information.component';
 import { IrrigationAndIrrigationSourceComponent } from './irrigation-and-irrigation-source/irrigation-and-irrigation-source.component';
 import { InterculturalOperationComponent } from './intercultural-operation/intercultural-operation.component';
-import { FertilizerAndFertilizingComponent } from './fertilizer-and-fertilizing/fertilizer-and-fertilizing.component'
+import { FertilizerAndFertilizingComponent } from './fertilizer-and-fertilizing/fertilizer-and-fertilizing.component';
+import { QuarantineControlMeasureComponent } from './quarantine-control-measure/quarantine-control-measure.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FertilizerAndFertilizingComponent } from './fertilizer-and-fertilizing/
     ProductionInformationComponent,
     IrrigationAndIrrigationSourceComponent,
     InterculturalOperationComponent,
-    FertilizerAndFertilizingComponent
+    FertilizerAndFertilizingComponent,
+    QuarantineControlMeasureComponent
   ],
   imports: [
     BrowserModule,

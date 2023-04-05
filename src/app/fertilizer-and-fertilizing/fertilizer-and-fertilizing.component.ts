@@ -57,7 +57,6 @@ export class FertilizerAndFertilizingComponent {
 
     this.isOtherFertilizersDisabled = value === 'disable';
   }
-  submitted = false;
 
   onFertilizerSelectionChange(event: any, fertilizer: string) {
     if (event.target.checked) {
@@ -69,6 +68,8 @@ export class FertilizerAndFertilizingComponent {
       }
     }
   }
+
+  submitted = false;
 
   onSubmitFertilizerAndFertilizing(FFData: any) {
 

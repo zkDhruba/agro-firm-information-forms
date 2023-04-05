@@ -1,0 +1,307 @@
+<form #quarantineControlForm="ngForm" (ngSubmit)="onSubmitQuarantineControlMeasure(quarantineControlForm.value)">
+    <div id="quarantine-control-page" class="border border-secondary bg-light m-5 p-2">
+        <div id="quarantine-control-measure-box">
+            <h2 class="text-center fs-3">
+                ৬. কোয়ারেন্টাইন পোকা ও রোগ দমন<br>
+                6. Quarantine Pests and Diseases
+            </h2>
+        </div>
+        <hr>
+        <div id="pests-and-diseases-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">কোয়ারেন্টাইন পেষ্ট এবং রোগ</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Quarantine Pests and Diseases</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; এলাকা ভিত্তিক ফসল অনুযায়ী কোয়ারেন্টাইন পোকা ও রোগের তালিকা করা আছে কিনা-</span><br>
+                <span>Is there any list of Qurantine Pests and Diseases for selected crops of selecetd locations?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="location-quarantine-list-yes" [value]=true
+                        name="isQuarantinePestDisese" ngModel>
+                    <label class="form-check-label" for="location-quarantine-list-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="location-quarantine-list-no" [value]=false
+                        name="isQuarantinePestDisese" ngModel>
+                    <label class="form-check-label" for="location-quarantine-list-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; নির্বাচিত ফসলের পেস্টরিস্ক এনালাইসিস করা আছে কিনা-</span><br>
+                <span>Any Pest risk analysis has done for the selected crop?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="pest-risk-yes" [value]=true
+                        name="isPestRiskAnalysis" ngModel>
+                    <label class="form-check-label" for="pest-risk-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="pest-risk-no" [value]=false
+                        name="isPestRiskAnalysis" ngModel>
+                    <label class="form-check-label" for="pest-risk-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row single-info-line mt-2 mb-2">
+            <div class="form-check col-9">
+                <span>&#x2022; কত দিন আগে নির্বাচিত ফসলের পোকা ও রোগের তালিকা করা হয়েছিল?</span><br>
+                <span>When pest risk analysis has done for the selected crop?</span>
+            </div>
+            <div class="flex-container gap-3 col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="last-analysis-6mo" [value]=6
+                        name="pestRiskAnalysis" ngModel>
+                    <label class="form-check-label" for="last-analysis-6mo">
+                        <span> ৬ মাস <br>
+                            6 month</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input col" type="radio" id="last-analysis-1y" [value]=12
+                        name="pestRiskAnalysis" ngModel>
+                    <label class="form-check-label" for="last-analysis-1y">
+                        <span>১ বছর<br>
+                            1 Year</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="last-analysis-3y" [value]=36
+                        name="pestRiskAnalysis" ngModel>
+                    <label class="form-check-label" for="last-analysis-3y">
+                        <span>৩ বছর<br>
+                            3 Years</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------------
+            Name of Quarantine Pests for Selected Crops Box
+    --------------------------------------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="quarantine-pest-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">নির্বাচিত ফসলের কোয়ারেন্টাইন পেষ্ট এর নাম</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Name of Quarantine Pests for Selected Crops</span>
+                </div>
+            </div>
+        </div>
+        <div class=" text-center align-items-center ">
+            <div class="flex-container form-check text-center col-12 m-4">
+                <label for="purifying-agent-local">
+                    <span class="mt-2"> সব্জির নাম:<br>
+                        Vegetable:</span>
+                </label>
+                <input class="mt-2 w-50 text-box form-control" type="text" ngModel name="vegetableName">
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let row of rowPestNameData; let i = index">
+                        <td class="text-center">
+                            <ng-container [ngSwitch]="i">
+                                <span *ngSwitchCase="0">পোকার নাম </span>
+                                <span *ngSwitchCase="1">আম - Mango <br> পোকার নাম</span>
+                                <span *ngSwitchCase="2">পান - Betel Leaf <br> পোকার নাম</span>
+                            </ng-container>
+                        </td>
+                        <td><input type="text" [(ngModel)]="row.Pest1" name="firstPestRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.Pest2" name="secondPestRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.Pest3" name="thirdPestRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.Pest4" name="fourthPestRow{{i + 1}}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-----------------------------------------------------
+        Name of Quarantine Diseases for Selected Crops Box
+    ------------------------------------------------------>
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="quarantine-diseases-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">নির্বাচিত ফসলের কোয়ারেন্টাইন রোগের নাম</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Name of Quarantine Diseases for Selected Crops</span>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive mt-4">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let row of rowDiseasesNameData; let i = index">
+                        <td class="text-center">
+                            <ng-container [ngSwitch]="i">
+                                <span *ngSwitchCase="0">সবজি <br> Vegetable </span>
+                                <span *ngSwitchCase="1">আম <br> Mango</span>
+                                <span *ngSwitchCase="2">পান <br> Betel Leaf</span>
+                            </ng-container>
+                        </td>
+                        <td><input type="text" [(ngModel)]="row.Diseases1" name="firstDiseasesRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.Diseases2" name="secondDiseasesRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.Diseases3" name="thirdDiseasesRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.Diseases4" name="fourthDiseasesRow{{i + 1}}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-----------------------------
+         Control Measures Box
+    ------------------------------>
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="control-measures-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">দমন</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Control Measures</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-check mt-4">
+            <span>&#x2022; পোকা ও রোগ দমনে কোন কোন পদ্ধতি ব্যবহার করা হয়-</span><br>
+            <span>Which techniques used for controlling pests and diseases?</span>
+        </div>
+        <div class="row m-2 px-5 pt-2">
+            <div class="form-check col">
+                <input class="form-check-input" type="checkbox" name="physical"
+                    [(ngModel)]="checkedTechniques.Physical"
+                    (change)="onTechniqueSelectionChange($event, 'Physical')">
+                <label class="form-check-label" for="technique-type-physical">
+                    <span>ফিজিক্যাল <br>
+                        Physical</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="checkbox" name="organic"
+                    [(ngModel)]="checkedTechniques.Chemical" (change)="onTechniqueSelectionChange($event, 'Chemical')">
+                <label class="form-check-label" for="technique-type-physical">
+                    <span> রাসায়নিক <br>
+                        Chemical</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="checkbox" name="biological"
+                    [(ngModel)]="checkedTechniques.Biological"
+                    (change)="onTechniqueSelectionChange($event, 'Biological')">
+                <label class="form-check-label" for="technique-type-biological">
+                    <span>বায়োলজিকাল<br>
+                        Biological</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="checkbox" name="mechanical"
+                    [(ngModel)]="checkedTechniques.Mechanical"
+                    (change)="onTechniqueSelectionChange($event, 'Mechanical')">
+                <label class="form-check-label" for="technique-type-mechanical">
+                    <span> ম্যাকানিকাল<br>
+                        Mechanical</span>
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="checkbox" name="bio-pesticide"
+                    [(ngModel)]="checkedTechniques.BioPesticide"
+                    (change)="onTechniqueSelectionChange($event, 'Bio Pesticide')">
+                <label class="form-check-label" for="technique-type-bio-pesticide">
+                    <span> বায়োপেস্টিসাইড<br>
+                        Bio Pesticide</span>
+                </label>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; উপোরোক্ত সকল পদ্ধতির সমন্বয়-  </span><br>
+                <span>Integration of all above mentioned techniques?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="all-technique-yes" [value]=true
+                        name="isIntegration" ngModel>
+                    <label class="form-check-label" for="all-technique-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="all-technique-no" [value]=false
+                        name="isIntegration" ngModel>
+                    <label class="form-check-label" for="all-technique-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; ২/৩ টির সমন্বয় </span><br>
+                <span>Integration of Just two/three-</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="some-technique-yes" [value]=true
+                        name="isIntegrationTwoThree" ngModel>
+                    <label class="form-check-label" for="some-technique-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="some-technique-no" [value]=false
+                        name="isIntegrationTwoThree" ngModel>
+                    <label class="form-check-label" for="some-technique-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
