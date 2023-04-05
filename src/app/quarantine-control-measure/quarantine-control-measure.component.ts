@@ -19,6 +19,54 @@ export class QuarantineControlMeasureComponent {
     { Diseases1: null, Diseases2: null, Diseases3: null, Diseases4: null }
   ];
 
+  rowOrganicPesticideName = [
+    { OrganicPesticide1: null, OrganicPesticide2: null, OrganicPesticide3: null,
+      OrganicPesticide4: null, OrganicPesticide5: null, OrganicPesticide6: null,
+      OrganicPesticide7: null, OrganicPesticide8: null, OrganicPesticide9: null },
+    { OrganicPesticide1: null, OrganicPesticide2: null, OrganicPesticide3: null,
+      OrganicPesticide4: null, OrganicPesticide5: null, OrganicPesticide6: null,
+      OrganicPesticide7: null, OrganicPesticide8: null, OrganicPesticide9: null },
+    { OrganicPesticide1: null, OrganicPesticide2: null, OrganicPesticide3: null,
+      OrganicPesticide4: null, OrganicPesticide5: null, OrganicPesticide6: null,
+      OrganicPesticide7: null, OrganicPesticide8: null, OrganicPesticide9: null },
+    { OrganicPesticide1: null, OrganicPesticide2: null, OrganicPesticide3: null,
+      OrganicPesticide4: null, OrganicPesticide5: null, OrganicPesticide6: null,
+      OrganicPesticide7: null, OrganicPesticide8: null, OrganicPesticide9: null }
+  ];
+
+  rowChemicalPesticideName = [
+    { ChemicalPesticide1: null, ChemicalPesticide2: null, ChemicalPesticide3: null,
+      ChemicalPesticide4: null, ChemicalPesticide5: null, ChemicalPesticide6: null,
+      ChemicalPesticide7: null, ChemicalPesticide8: null, ChemicalPesticide9: null },
+    { ChemicalPesticide1: null, ChemicalPesticide2: null, ChemicalPesticide3: null,
+      ChemicalPesticide4: null, ChemicalPesticide5: null, ChemicalPesticide6: null,
+      ChemicalPesticide7: null, ChemicalPesticide8: null, ChemicalPesticide9: null },
+    { ChemicalPesticide1: null, ChemicalPesticide2: null, ChemicalPesticide3: null,
+      ChemicalPesticide4: null, ChemicalPesticide5: null, ChemicalPesticide6: null,
+      ChemicalPesticide7: null, ChemicalPesticide8: null, ChemicalPesticide9: null },
+    { ChemicalPesticide1: null, ChemicalPesticide2: null, ChemicalPesticide3: null,
+      ChemicalPesticide4: null, ChemicalPesticide5: null, ChemicalPesticide6: null,
+      ChemicalPesticide7: null, ChemicalPesticide8: null, ChemicalPesticide9: null }
+  ];
+
+  
+rowFungicidePesticideName = [
+  { FungicidePesticide1: null, FungicidePesticide2: null, FungicidePesticide3: null,
+    FungicidePesticide4: null, FungicidePesticide5: null, FungicidePesticide6: null,
+    FungicidePesticide7: null, FungicidePesticide8: null, FungicidePesticide9: null },
+  { FungicidePesticide1: null, FungicidePesticide2: null, FungicidePesticide3: null,
+    FungicidePesticide4: null, FungicidePesticide5: null, FungicidePesticide6: null,
+    FungicidePesticide7: null, FungicidePesticide8: null, FungicidePesticide9: null },
+  { FungicidePesticide1: null, FungicidePesticide2: null, FungicidePesticide3: null,
+    FungicidePesticide4: null, FungicidePesticide5: null, FungicidePesticide6: null,
+    FungicidePesticide7: null, FungicidePesticide8: null, FungicidePesticide9: null },
+  { FungicidePesticide1: null, FungicidePesticide2: null, FungicidePesticide3: null,
+    FungicidePesticide4: null, FungicidePesticide5: null, FungicidePesticide6: null,
+    FungicidePesticide7: null, FungicidePesticide8: null, FungicidePesticide9: null }
+  ];
+
+  tableHeadPesticide = ['ফসল Crop','তারিখ Date', 'নাম Name', 'পরিমান Quantity','তারিখ Date', 'নাম Name', 'পরিমান Quantity','তারিখ Date', 'নাম Name', 'পরিমান Quantity'];
+
   selectedTechniques: string[] = [];
 
   checkedTechniques: any = {
@@ -61,8 +109,98 @@ export class QuarantineControlMeasureComponent {
     console.log(vegetableDisesesName, mangoDisesesName, betelLeafDisesesName);
 
     // console.log(this.selectedTechniques);
+
+    // Organic Pesticide
+
+    let vegetableOrganicPesticide: any[] = [
+      QCMData.firstOrganicPesticideRow1,QCMData.secondOrganicPesticideRow1,QCMData.thirdOrganicPesticideRow1,
+      QCMData.fourthOrganicPesticideRow1,QCMData.fifthOrganicPesticideRow1,QCMData.sixthOrganicPesticideRow1,
+      QCMData.seventhOrganicPesticideRow1,QCMData.eighthOrganicPesticideRow1,QCMData.ninthOrganicPesticideRow1,
+    ]
+
     
-    console.log(QCMData);
+    let mangoOrganicPesticide: any[] = [
+      QCMData.firstOrganicPesticideRow2,QCMData.secondOrganicPesticideRow2,QCMData.thirdOrganicPesticideRow2,
+      QCMData.fourthOrganicPesticideRow2,QCMData.fifthOrganicPesticideRow2,QCMData.sixthOrganicPesticideRow2,
+      QCMData.seventhOrganicPesticideRow2,QCMData.eighthOrganicPesticideRow2,QCMData.ninthOrganicPesticideRow2
+    ]
+
+    let betelLeafOrganicPesticide: any[] = [
+      QCMData.firstOrganicPesticideRow3,QCMData.secondOrganicPesticideRow3,QCMData.thirdOrganicPesticideRow3,
+      QCMData.fourthOrganicPesticideRow3,QCMData.fifthOrganicPesticideRow3,QCMData.sixthOrganicPesticideRow3,
+      QCMData.seventhOrganicPesticideRow3,QCMData.eighthOrganicPesticideRow3,QCMData.ninthOrganicPesticideRow3
+    ]
+
+    let otherOrganicPesticde: any[] = [
+      QCMData.firstOrganicPesticideRow4,QCMData.secondOrganicPesticideRow4,QCMData.thirdOrganicPesticideRow4,
+      QCMData.fourthOrganicPesticideRow4,QCMData.fifthOrganicPesticideRow4,QCMData.sixthOrganicPesticideRow4,
+      QCMData.seventhOrganicPesticideRow4,QCMData.eighthOrganicPesticideRow4,QCMData.ninthOrganicPesticideRow4
+    ]
+    // console.log(vegetableOrganicPesticide, mangoOrganicPesticide, betelLeafOrganicPesticide, otherOrganicPesticde);
+
+    // Chemical Pesticide
+
+    let vegetableChemicalPesticide: any[] = [
+      QCMData.firstChemicalPesticideRow1,QCMData.secondChemicalPesticideRow1,QCMData.thirdChemicalPesticideRow1,
+      QCMData.fourthChemicalPesticideRow1,QCMData.fifthChemicalPesticideRow1,QCMData.sixthChemicalPesticideRow1,
+      QCMData.seventhChemicalPesticideRow1,QCMData.eighthChemicalPesticideRow1,QCMData.ninthChemicalPesticideRow1,
+      ]
+      
+      
+      let mangoChemicalPesticide: any[] = [
+      QCMData.firstChemicalPesticideRow2,QCMData.secondChemicalPesticideRow2,QCMData.thirdChemicalPesticideRow2,
+      QCMData.fourthChemicalPesticideRow2,QCMData.fifthChemicalPesticideRow2,QCMData.sixthChemicalPesticideRow2,
+      QCMData.seventhChemicalPesticideRow2,QCMData.eighthChemicalPesticideRow2,QCMData.ninthChemicalPesticideRow2
+      ]
+      
+      let betelLeafChemicalPesticide: any[] = [
+      QCMData.firstChemicalPesticideRow3,QCMData.secondChemicalPesticideRow3,QCMData.thirdChemicalPesticideRow3,
+      QCMData.fourthChemicalPesticideRow3,QCMData.fifthChemicalPesticideRow3,QCMData.sixthChemicalPesticideRow3,
+      QCMData.seventhChemicalPesticideRow3,QCMData.eighthChemicalPesticideRow3,QCMData.ninthChemicalPesticideRow3
+      ]
+      
+      let otherChemicalPesticide: any[] = [
+      QCMData.firstChemicalPesticideRow4,QCMData.secondChemicalPesticideRow4,QCMData.thirdChemicalPesticideRow4,
+      QCMData.fourthChemicalPesticideRow4,QCMData.fifthChemicalPesticideRow4,QCMData.sixthChemicalPesticideRow4,
+      QCMData.seventhChemicalPesticideRow4,QCMData.eighthChemicalPesticideRow4,QCMData.ninthChemicalPesticideRow4
+      ]
+
+      // console.log(vegetableChemicalPesticide, mangoChemicalPesticide, betelLeafChemicalPesticide, otherChemicalPesticide);
+
+      // Fungicide Bactericide
+
+      
+let vegetableFungicideBactericide: any[] = [
+  QCMData.firstFungicidePesticideRow1,QCMData.secondFungicidePesticideRow1,QCMData.thirdFungicidePesticideRow1,
+  QCMData.fourthFungicidePesticideRow1,QCMData.fifthFungicidePesticideRow1,QCMData.sixthFungicidePesticideRow1,
+  QCMData.seventhFungicidePesticideRow1,QCMData.eighthFungicidePesticideRow1,QCMData.ninthFungicidePesticideRow1,
+  ]
+  
+  
+  let mangoFungicideBactericide: any[] = [
+  QCMData.firstFungicidePesticideRow2,QCMData.secondFungicidePesticideRow2,QCMData.thirdFungicidePesticideRow2,
+  QCMData.fourthFungicidePesticideRow2,QCMData.fifthFungicidePesticideRow2,QCMData.sixthFungicidePesticideRow2,
+  QCMData.seventhFungicidePesticideRow2,QCMData.eighthFungicidePesticideRow2,QCMData.ninthFungicidePesticideRow2
+  ]
+  
+  let betelLeafFungicideBactericide: any[] = [
+  QCMData.firstFungicidePesticideRow3,QCMData.secondFungicidePesticideRow3,QCMData.thirdFungicidePesticideRow3,
+  QCMData.fourthFungicidePesticideRow3,QCMData.fifthFungicidePesticideRow3,QCMData.sixthFungicidePesticideRow3,
+  QCMData.seventhFungicidePesticideRow3,QCMData.eighthFungicidePesticideRow3,QCMData.ninthFungicidePesticideRow3
+  ]
+  
+  let otherFungicideBactericide: any[] = [
+  QCMData.firstFungicidePesticideRow4,QCMData.secondFungicidePesticideRow4,QCMData.thirdFungicidePesticideRow4,
+  QCMData.fourthFungicidePesticideRow4,QCMData.fifthFungicidePesticideRow4,QCMData.sixthFungicidePesticideRow4,
+  QCMData.seventhFungicidePesticideRow4,QCMData.eighthFungicidePesticideRow4,QCMData.ninthFungicidePesticideRow4
+  ]
+
+  // console.log(vegetableFungicideBactericide, mangoFungicideBactericide, betelLeafFungicideBactericide, otherFungicideBactericide);
+  
+
+    
+    
+  console.log(QCMData);
     
   }
 

@@ -299,6 +299,340 @@
         </div>
     </div>
 
+    <!---------------------------------
+        Organic Pesticide Table Box
+    ---------------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="organic-pesticide-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">জৈব কীটনাশক</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Organic Pesticde</span>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center" *ngFor="let head of tableHeadPesticide">{{ head }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of rowOrganicPesticideName; let i = index">
+                        <td class="text-center">
+                            <ng-container [ngSwitch]="i">
+                                <span *ngSwitchCase="0">সবজি <br> Vegetable </span>
+                                <span *ngSwitchCase="1">আম <br> Mango</span>
+                                <span *ngSwitchCase="2">পান <br> Betel Leaf</span>
+                                <span *ngSwitchCase="3">Others</span>
+                            </ng-container>
+                        </td>
+                        <td><input class="form-control" type="date" [(ngModel)]="row.OrganicPesticide1" name="firstOrganicPesticideRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.OrganicPesticide2" name="secondOrganicPesticideRow{{i + 1}}"></td>
+                        <td><input type="number" [(ngModel)]="row.OrganicPesticide3" name="thirdOrganicPesticideRow{{i + 1}}"></td>
+                        <td><input class="form-control" type="date" [(ngModel)]="row.OrganicPesticide4" name="fourthOrganicPesticideRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.OrganicPesticide5" name="fifthOrganicPesticideRow{{i + 1}}"></td>
+                        <td><input type="number" [(ngModel)]="row.OrganicPesticide6" name="sixthOrganicPesticideRow{{i + 1}}"></td>
+                        <td><input class="form-control" type="date" [(ngModel)]="row.OrganicPesticide7" name="seventhOrganicPesticideRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.OrganicPesticide8" name="eighthOrganicPesticideRow{{i + 1}}"></td>
+                        <td><input type="number" [(ngModel)]="row.OrganicPesticide9" name="ninthOrganicPesticideRow{{i + 1}}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--------------------------------
+        Chemical Pesticide Box
+    --------------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="chemical-pesticide-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">রাসায়নিক কীটনাশক</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Chemical Pesticde</span>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center" *ngFor="let head of tableHeadPesticide">{{ head }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of rowChemicalPesticideName; let i = index">
+                        <td class="text-center">
+                            <ng-container [ngSwitch]="i">
+                                <span *ngSwitchCase="0">সবজি <br> Vegetable </span>
+                                <span *ngSwitchCase="1">আম <br> Mango</span>
+                                <span *ngSwitchCase="2">পান <br> Betel Leaf</span>
+                                <span *ngSwitchCase="3">Others</span>
+                            </ng-container>
+                        </td>
+                        <td><input class="form-control" type="date" [(ngModel)]="row.ChemicalPesticide1" name="firstChemicalPesticideRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.ChemicalPesticide2" name="secondChemicalPesticideRow{{i + 1}}"></td>
+                        <td><input type="number" [(ngModel)]="row.ChemicalPesticide3" name="thirdChemicalPesticideRow{{i + 1}}"></td>
+                        <td><input class="form-control" type="date" [(ngModel)]="row.ChemicalPesticide4" name="fourthChemicalPesticideRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.ChemicalPesticide5" name="fifthChemicalPesticideRow{{i + 1}}"></td>
+                        <td><input type="number" [(ngModel)]="row.ChemicalPesticide6" name="sixthChemicalPesticideRow{{i + 1}}"></td>
+                        <td><input class="form-control" type="date" [(ngModel)]="row.ChemicalPesticide7" name="seventhChemicalPesticideRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.ChemicalPesticide8" name="eighthChemicalPesticideRow{{i + 1}}"></td>
+                        <td><input type="number" [(ngModel)]="row.ChemicalPesticide9" name="ninthChemicalPesticideRow{{i + 1}}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-----------------------------------
+            Fungicide Bactericide
+    ------------------------------------>
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="fungicide-bactericide-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">ছত্রাকনাশক ও ব্যাকটিরিয়া-নাশক</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Fungicide Bactericide</span>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center" *ngFor="let head of tableHeadPesticide">{{ head }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of rowFungicidePesticideName; let i = index">
+                        <td class="text-center">
+                            <ng-container [ngSwitch]="i">
+                                <span *ngSwitchCase="0">সবজি <br> Vegetable </span>
+                                <span *ngSwitchCase="1">আম <br> Mango</span>
+                                <span *ngSwitchCase="2">পান <br> Betel Leaf</span>
+                                <span *ngSwitchCase="3">Others</span>
+                            </ng-container>
+                        </td>
+                        <td><input class="form-control" type="date" [(ngModel)]="row.FungicidePesticide1" name="firstFungicidePesticideRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.FungicidePesticide2" name="secondFungicidePesticideRow{{i + 1}}"></td>
+                        <td><input type="number" [(ngModel)]="row.FungicidePesticide3" name="thirdFungicidePesticideRow{{i + 1}}"></td>
+                        <td><input class="form-control" type="date" [(ngModel)]="row.FungicidePesticide4" name="fourthFungicidePesticideRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.FungicidePesticide5" name="fifthFungicidePesticideRow{{i + 1}}"></td>
+                        <td><input type="number" [(ngModel)]="row.FungicidePesticide6" name="sixthFungicidePesticideRow{{i + 1}}"></td>
+                        <td><input class="form-control" type="date" [(ngModel)]="row.FungicidePesticide7" name="seventhFungicidePesticideRow{{i + 1}}"></td>
+                        <td><input type="text" [(ngModel)]="row.FungicidePesticide8" name="eighthFungicidePesticideRow{{i + 1}}"></td>
+                        <td><input type="number" [(ngModel)]="row.FungicidePesticide9" name="ninthFungicidePesticideRow{{i + 1}}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+ <!-----------------------------------------------------------
+        Proper Management of quarantine insect and diseases
+ ------------------------------------------------------------>
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="proper-management-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">কোয়ারেন্টাইন পোকা ও রোগ দমনের সঠিক ব্যাবস্থাপনা</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Proper Management of quarantine insect and diseases</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; কোন ধরনের রোগ ও পোকা মাকড় দ্বারা ফসল আক্রান্ত হয়েছে সনাক্ত করা হয়েছে কিনা-</span><br>
+                <span>Does pests and diseases identify that infested and infected the crop most?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="identified-yes" [value]=true
+                        name="isIdentify" ngModel>
+                    <label class="form-check-label" for="identified-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="identified-no" [value]=false
+                        name="isIdentify" ngModel>
+                    <label class="form-check-label" for="identified-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পোকা ও রোগ দমনে কৃষি সম্প্রসারণ কর্মকর্তা ও বিশেষজ্ঞের মতামত নেয়া হয়ছে কিনা-</span><br>
+                <span>Did the advices and suggestions taken from Agricultural Extension Officer and Other Experts for controlling of pests and diseases?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="suggestion-taken-yes" [value]=true
+                        name="isSuggestionsTaken" ngModel>
+                    <label class="form-check-label" for="suggestion-taken-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="suggestion-taken-no" [value]=false
+                        name="isSuggestionsTaken" ngModel>
+                    <label class="form-check-label" for="suggestion-taken-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; নির্বাচিত ফসলে ফেরোমোন ট্র্যাপ ব্যবহার করা হয়ছে কিনা-</span><br>
+                <span>Did pheromone traps were used?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isPheromoneUsed" ngModel>
+                    <label class="form-check-label" for="pheromone-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isPheromoneUsed" ngModel>
+                    <label class="form-check-label" for="pheromone-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row single-info-line mt-2 mb-2">
+            <div class="form-check col-9">
+                <span>&#x2022; ফেরোমোন ট্র্যাপ কখন দেয়া হয়েছে</span><br>
+                <span>When pheromone traps were used?</span>
+            </div>
+            <div class="flex-container gap-3 col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Before"
+                        name="pheromoneUsedTime" ngModel>
+                    <label class="form-check-label" for="before-fruit">
+                        <span> ফল আসার আগে <br>
+                            Before Fruit Set</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input col" type="radio" value="After"
+                        name="pheromoneUsedTime" ngModel>
+                    <label class="form-check-label" for="after-fruit">
+                        <span>ফুল আসার আগে<br>
+                            After Fruit Set</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; ফসল স্পেসিফিক সঠিক ট্র্যাপ ব্যবহার করা হয়েছে কিনা?</span><br>
+                <span>Does used pheromone trap for the right crop?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isCropPheromoneUsed" ngModel>
+                    <label class="form-check-label" for="right-pheromone-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isCropPheromoneUsed" ngModel>
+                    <label class="form-check-label" for="right-pheromone-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; ফেরোমোন ট্র্যাপের পাশাপাশি রাসায়নিক কিটনাশক ব্যবহার করা হয়েছে কিনা-</span><br>
+                <span>Does any chemical pesticide used beside pheromone trap?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isChemicalPesticideUsed" ngModel>
+                    <label class="form-check-label" for="chemical-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isChemicalPesticideUsed" ngModel>
+                    <label class="form-check-label" for="chemical-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; গাছ দ্রুত বৃদ্ধির জন্য হরমোন ব্যবহার করা হয়ছে কিনা-</span><br>
+                <span>Does any hormone used for quick amplification of crop??</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHormonesUsed" ngModel>
+                    <label class="form-check-label" for="hormone-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHormonesUsed" ngModel>
+                    <label class="form-check-label" for="hormone-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------
+        Vegetables Box
+    ------------------------->
 
 
     <div class="text-center mb-4">
