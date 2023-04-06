@@ -406,6 +406,363 @@
         </div>
     </div>
 
+    <!-----------------------
+         Vegetable Box
+    ------------------------>
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="vegetable-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সবজি</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Vegetables</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সবজি উত্তোলনের সময় ছুরি ব্যবহার করা হয়েছে কিনা-</span><br>
+                <span>Did sharp knife used during crop harvesting?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isKnifeUsed" ngModel>
+                    <label class="form-check-label" for="knife-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isKnifeUsed" ngModel>
+                    <label class="form-check-label" for="knife-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; ব্যবহৃত টুল হাইজেনিক ছিল কিনা-</span><br>
+                <span>Was the used tool hygenic?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHygienicToolUsed" ngModel>
+                    <label class="form-check-label" for="tool-hygenic-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHygienicToolUsed" ngModel>
+                    <label class="form-check-label" for="tool-hygenic-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সব্জির গায়ে যাতে আঘাত না লাগে সে ব্যবস্থা ছিল কিনা-</span><br>
+                <span>Was there any measure for protecting vegetables from injury?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isInjuryProtection" ngModel>
+                    <label class="form-check-label" for="injury-protection-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isInjuryProtection" ngModel>
+                    <label class="form-check-label" for="injury-protection-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------
+            Mango Box
+    ------------------------>
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="mango-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">আম</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Vegetables</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আম সংগ্রহে নির্দিষ্ট টুলের মাধ্যমে করা হয়েছে কিনা-</span><br>
+                <span>Did specific tools used for harvesting of mango?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isToolsUsed" ngModel>
+                    <label class="form-check-label" for="mango-tools-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isToolsUsed" ngModel>
+                    <label class="form-check-label" for="mango-tools-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আম সংগ্রহ করে আমের কস সঠিকভাবে ঝরানো হয়েছে কিনা-</span><br>
+                <span>Did the latex secrete properly after harvesting of mango?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isLatexSecrete" ngModel>
+                    <label class="form-check-label" for="latex-secrete-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isLatexSecrete" ngModel>
+                    <label class="form-check-label" for="latex-secrete-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সংগৃহীত আম সুন্দরভাবে কন্টেইনারে সাজানো হয়েছে কিনা-</span><br>
+                <span>Was the harvested mango arranged in container?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isArrangedInContainer" ngModel>
+                    <label class="form-check-label" for="arranged-container-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isArrangedInContainer" ngModel>
+                    <label class="form-check-label" for="arranged-container-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সংগৃহীত আম আলাদা আলাদা ভাবে রাখা হয়েছে কিনা-</span><br>
+                <span>Did collected mangoes keep separately?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isKeepSeparately" ngModel>
+                    <label class="form-check-label" for="separare-bagging">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isKeepSeparately" ngModel>
+                    <label class="form-check-label" for="separare-nonbagging">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------
+        Betel Leaf Box
+    ----------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="betel-leaf-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">পান</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Betel Leaf</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পান উত্তোলন সর্বাধিক হাইজেনিক উপায়ে করা হয়েছিল কিনা-</span><br>
+                <span>Did the maximum level of hygenic procedures applied during betel leaf harvesting?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isMaximumHygienic" ngModel>
+                    <label class="form-check-label" for="maximum-hygiene-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isMaximumHygienic" ngModel>
+                    <label class="form-check-label" for="maximum-hygiene-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; উত্তোলনের সময় কন্টেইনার ব্যাক্টেরিয়ামুক্ত বলে নিশ্চিত হওয়া গেছে কিনা-</span><br>
+                <span>Does the harvested container of betel leaf assured the bacteria free container?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isBacteriaFree" ngModel>
+                    <label class="form-check-label" for="bactria-free-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isBacteriaFree" ngModel>
+                    <label class="form-check-label" for="bacteria-free-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পান উত্তোলন করে সরাসরি কন্টেইনারে রাখা হয়েছিল কিনা-</span><br>
+                <span>Did the harvested betel leaf directly put inside the bacteria free container?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDirectlyPut" ngModel>
+                    <label class="form-check-label" for="directly-put-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDirectlyPut" ngModel>
+                    <label class="form-check-label" for="directly-put-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সংগ্রহের পর পোর্টেবল পানি ব্যবহার করা হয়েছিল কিনা-</span><br>
+                <span>Did distilled water applied after harvesting of betel leaf?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDistilledWaterApplied" ngModel>
+                    <label class="form-check-label" for="distilled-water-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDistilledWaterApplied" ngModel>
+                    <label class="form-check-label" for="distilled-water-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সালমোনেলা যাতে পানে সংক্রমিত না হয় সেজন্য সর্বোচ্চ সতর্কতা অবলম্বন করা হয়েছে কিনা-</span><br>
+                <span>Did maximum level of cautions taken avoiding infection of salmonella bacteria?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isCautionTaken" ngModel>
+                    <label class="form-check-label" for="caution-taken-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isCautionTaken" ngModel>
+                    <label class="form-check-label" for="caution-taken-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------
+        Local Collection Center Box
+    ------------------------------------>
+
+    <div>
+        
+    </div>
+
+
 
     <div class="text-center mb-4">
         <button type="submit" class="btn btn-primary">Submit</button>
