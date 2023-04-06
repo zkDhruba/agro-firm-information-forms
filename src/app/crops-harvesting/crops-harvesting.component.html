@@ -758,8 +758,212 @@
         Local Collection Center Box
     ------------------------------------>
 
-    <div>
-        
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="collection-center-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">লোকাল কালেকশন সেন্টার</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Local Collection Center</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; লোকাল কালেকশন সেন্টার আছে কিনা-</span><br>
+                <span>Have any local collection center?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isLocalCollectionCenter" ngModel>
+                    <label class="form-check-label" for="collection-center-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isLocalCollectionCenter" ngModel>
+                    <label class="form-check-label" for="collection-center-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সংগৃহীত ফসল লোকাল কালেকশন সেন্টারে আনা হয়েছে কিনা-</span><br>
+                <span>Did the harvested crop brought to the local collection center?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isCropBroughtLCC" ngModel>
+                    <label class="form-check-label" for="brought-lcc-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isCropBroughtLCC" ngModel>
+                    <label class="form-check-label" for="brought-lcc-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; লোকাল কালেকশন সেন্টারে প্রিকোলিং ব্যবস্থা আছে কিনা-</span><br>
+                <span>Does pre cooling facility available on local collection center?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isPreCoolingSystem" ngModel>
+                    <label class="form-check-label" for="precooling-exist-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isPreCoolingSystem" ngModel>
+                    <label class="form-check-label" for="precooling-exist-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; ফিল্ড থেকে হাইজেনিক উপায়ে ফসল লোকাল কালেকশন সেন্টারে আনা হয়েছে কিনা-</span><br>
+                <span>Did hygenic procedure maintained during transporting of harvested betel leaf from field to local collection center?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHygienicTransporting" ngModel>
+                    <label class="form-check-label" for="hygenic-transporting-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHygienicTransporting" ngModel>
+                    <label class="form-check-label" for="hygenic-transporting-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; ফিল্ড থেকে কালেকশন সেন্টারে আনার জন্য কোন ধরনের ট্রান্সপোর্ট ব্যবহার করা হয়েছে?</span><br>
+                <span>Which transportation used for transporting harvested betel leaf from field to collection center?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Open"
+                        name="transportation" ngModel>
+                    <label class="form-check-label" for="shaded">
+                        <span>খোলা ভ্যান <br>
+                            Open Van</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Cover"
+                        name="transportation" ngModel>
+                    <label class="form-check-label" for="sunny">
+                        <span>কভার ভ্যান<br>
+                            Cover Van</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; লোকাল কালেকশন সেন্টারে প্রাইমারী সর্টিং এবং গ্রেডিং হয়েছিল কিনা-</span><br>
+                <span>Did secondary grading done on local collection center?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isSeconddaryGrading" ngModel>
+                    <label class="form-check-label" for="secondary-grading-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isSeconddaryGrading" ngModel>
+                    <label class="form-check-label" for="secondary-grading-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; কালেকশন সেন্টারে শীততাপ নিয়ন্ত্রন ব্যবস্থা আছে কিনা-</span><br>
+                <span>Is collection center air conditioned?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isAirConditioned" ngModel>
+                    <label class="form-check-label" for="air-conditioned-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isAirConditioned" ngModel>
+                    <label class="form-check-label" for="air-conditioned-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; লোকাল কালেকশন সেন্টারে কত সময় রাখা হয়েছিল-</span><br>
+                <span>How much time harvested crop kept to local collection center?</span>
+            </div>
+            <div class="flex-container gap-4">
+                <div class="col-4 col-sm-4 text-center">
+                    <label for="hours" class="form-label">
+                        <span> ঘন্টা<br>
+                        Hours</span></label>
+                    <input name="hour" type="number" class="form-control" id="hour" ngModel>
+                  </div>
+                  <div class="col-4 col-sm-4 text-center">
+                    <label for="minutes" class="form-label">                        
+                        <span>মিনিট<br>
+                        Minutes</span></label>
+                    <input name="minutes" type="number" class="form-control" id="minute" ngModel>
+                  </div>
+            </div>
+        </div>
     </div>
 
 

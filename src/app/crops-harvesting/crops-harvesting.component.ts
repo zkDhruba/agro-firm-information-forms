@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class CropsHarvestingComponent {
 
   onSubmitCropsHaresting(CHData:any){
+    console.log(CHData);
     
   }
 
