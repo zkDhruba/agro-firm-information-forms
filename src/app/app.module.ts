@@ -13,6 +13,7 @@ import { IrrigationAndIrrigationSourceComponent } from './irrigation-and-irrigat
 import { InterculturalOperationComponent } from './intercultural-operation/intercultural-operation.component';
 import { FertilizerAndFertilizingComponent } from './fertilizer-and-fertilizing/fertilizer-and-fertilizing.component';
 import { QuarantineControlMeasureComponent } from './quarantine-control-measure/quarantine-control-measure.component';
+import { CropsHarvestingComponent } from './crops-harvesting/crops-harvesting.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { QuarantineControlMeasureComponent } from './quarantine-control-measure/
     IrrigationAndIrrigationSourceComponent,
     InterculturalOperationComponent,
     FertilizerAndFertilizingComponent,
-    QuarantineControlMeasureComponent
+    QuarantineControlMeasureComponent,
+    CropsHarvestingComponent
   ],
   imports: [
     BrowserModule,

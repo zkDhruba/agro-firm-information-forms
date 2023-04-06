@@ -296,7 +296,7 @@ let vegetableFungicideBactericide: any[] = [
   }
 
   let QCMAllData:any = {
-    generalInformationID: '6427fc064310a9504c8be92b',
+    generalInformationID: '6427a94cc7179916780c5de4',
     quarantinePestDieases,
     quarantineNamePests,
     quarantinePestDiseseName,

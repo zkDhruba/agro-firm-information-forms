@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class QuarantineControlMeasureDataService {
 
-  QCMGetUrl = 'https://modern-pink-trench-coat.cyclic.app/api/quarantine-pests-diseases/get-by-general-information-id/6427fc064310a9504c8be92b';
+  QCMGetUrl = 'https://modern-pink-trench-coat.cyclic.app/api/quarantine-pests-diseases/get-by-general-information-id/6427a94cc7179916780c5de4';
   QCMPostUrl = 'https://modern-pink-trench-coat.cyclic.app/api/quarantine-pests-diseases/add'
 
   constructor(private http:HttpClient) { }
