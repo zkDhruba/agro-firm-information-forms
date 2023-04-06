@@ -12,7 +12,8 @@ import { ProductionInformationComponent } from './production-information/product
 import { IrrigationAndIrrigationSourceComponent } from './irrigation-and-irrigation-source/irrigation-and-irrigation-source.component';
 import { InterculturalOperationComponent } from './intercultural-operation/intercultural-operation.component';
 import { FertilizerAndFertilizingComponent } from './fertilizer-and-fertilizing/fertilizer-and-fertilizing.component';
-import { QuarantineControlMeasureComponent } from './quarantine-control-measure/quarantine-control-measure.component'
+import { QuarantineControlMeasureComponent } from './quarantine-control-measure/quarantine-control-measure.component';
+
 
 @NgModule({
   declarations: [

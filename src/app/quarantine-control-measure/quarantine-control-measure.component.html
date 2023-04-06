@@ -607,7 +607,7 @@
         <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
             <div class="form-check">
                 <span>&#x2022; গাছ দ্রুত বৃদ্ধির জন্য হরমোন ব্যবহার করা হয়ছে কিনা-</span><br>
-                <span>Does any hormone used for quick amplification of crop??</span>
+                <span>Does any hormone used for quick amplification of crop?</span>
             </div>
             <div class="flex-container">
                 <div class="form-check">
@@ -633,6 +633,440 @@
     <!------------------------
         Vegetables Box
     ------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="vegetable-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সবজি</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Vegetables</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সব্জির পোকা দমনে সঠিক সময়ে পদক্ষেপ নেয়া হয়েছে কিনা-</span><br>
+                <span>Does timely control measure taken controlling pests on vegetables?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isTimelyControllingPests" ngModel>
+                    <label class="form-check-label" for="vegetable-timely-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isTimelyControllingPests" ngModel>
+                    <label class="form-check-label" for="vegetable-timely-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সব্জির রোগ দমনে সঠিক সময়ে পদক্ষেপ নেয়া হয়েছে কিনা-</span><br>
+                <span>Does timely control measure taken controlling diseases on vegetables?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isTimelyControllingDiseascs" ngModel>
+                    <label class="form-check-label" for="diseases-vegetable-timely-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isTimelyControllingDiseascs" ngModel>
+                    <label class="form-check-label" for="diseases-vegetable-timely-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; নির্বাচিত ফেরোমন ট্র্যাপ ফসলের জন্য কাজ করছে কিনা</span><br>
+                <span>Does selected pheromone trap worked properly?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isPheromoneWorked" ngModel>
+                    <label class="form-check-label" for="pheromone-worked-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isPheromoneWorked" ngModel>
+                    <label class="form-check-label" for="pheromone-worked-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; মাঠ নিয়মিত মনিটরিং করা হয়েছে কিনা-</span><br>
+                <span>Does field regularly monitored?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isRegularlyMonitored" ngModel>
+                    <label class="form-check-label" for="regularly-monitored-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isRegularlyMonitored" ngModel>
+                    <label class="form-check-label" for="regularly-monitored-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; ব্যাগিং পদ্ধতি ব্যবহার করা হয়েছে কিনা-</span><br>
+                <span>Does bagging used for controlling pests?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isBagUsed" ngModel>
+                    <label class="form-check-label" for="bag-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isBagUsed" ngModel>
+                    <label class="form-check-label" for="bag-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; যদি হয় তবে ব্যবহৃত ব্যাগ</span><br>
+                <span>If used, color of used bag-</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="White"
+                        name="colorBag" ngModel>
+                    <label class="form-check-label" for="white-bag">
+                        <span> সাদা <br>
+                            White</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Brown"
+                        name="colorBag" ngModel>
+                    <label class="form-check-label" for="brown-bag">
+                        <span>বাদামী<br>
+                            Brown</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------
+        Mango Box
+    ----------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="mango-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">আম</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Vegetables</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আমের পোকা ও রোগ দমনে সঠিক সময়ে সঠিক ব্যবস্থা নেয়া হয়েছে কিনা-</span><br>
+                <span>Did proper management taken on proper time for controlling of insects and diseases on mango?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isProperManagement" ngModel>
+                    <label class="form-check-label" for="proper-mango-management-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isProperManagement" ngModel>
+                    <label class="form-check-label" for="proper-mango-management-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আমের ফলের মাছি পোকা দমনে ব্যাগিং পদ্ধতি অনুসরন করা হয়েছে কিনা-</span><br>
+                <span>Did bagging practice used for controlling of mango fruit fly?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isBaggingUsed" ngModel>
+                    <label class="form-check-label" for="bagging-fruit-fly-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isBaggingUsed" ngModel>
+                    <label class="form-check-label" for="bagging-fruit-fly-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আমের পোকা ও রোগ দমনে সমন্বিত পদ্ধতি(IPM) ব্যবহার করা হয়েছে কিনা-</span><br>
+                <span>Did Integrated Pest Management(IPM) used for controlling of mango fruit fly?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isIPMUsed" ngModel>
+                    <label class="form-check-label" for="ipm-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isIPMUsed" ngModel>
+                    <label class="form-check-label" for="ipm-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আম পাকার কতদিন আগে ব্যাগিং করা হয়েছিল??</span><br>
+                <span>How many days before ripening of mango bagging were done?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-5">
+                    <input type="number" class="form-control" name="daysBeforeBagging" ngModel>
+                    <span class="input-group-text">দিন<br>
+                        Day(s)</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আমের ভোমরা পোকা, ফল ছিদ্রকারী পোকা, মিলিবাগ এবং হোপার পোকা দমনে ব্যবস্থা নেওয়া হয়েছে কিনা-</span><br>
+                <span>Did any measure take on conrol of fruit fly, meanlybug, hopper and mango weevil?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isMeaserTake" ngModel>
+                    <label class="form-check-label" for="measure-bugs-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isMeaserTake" ngModel>
+                    <label class="form-check-label" for="measure-bugs-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আমের বাগানে ঝড়ে পরা আম সংগ্রহ করে বিনষ্ট করা হয়েছে কিনা-</span><br>
+                <span>In mango garden, do lodged mangoes collected and burned?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isLodgedBurned" ngModel>
+                    <label class="form-check-label" for="lodged-burned-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isLodgedBurned" ngModel>
+                    <label class="form-check-label" for="lodged-burned-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; আমের এনথ্রাকনোজরোগ দমনে সঠিক পদ্ধতি অবলম্বন করা হয়েছে কিনা-</span><br>
+                <span>Does any right measure taken controlling anthracnose of mangoes?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isRightAnthracnose" ngModel>
+                    <label class="form-check-label" for="anthracnose-measure-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isRightAnthracnose" ngModel>
+                    <label class="form-check-label" for="anthracnose-measure-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------
+        Betel Leaf Box
+    ------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="betel-leaf-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">পান</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Betel Leaf</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; পানে সালমোনেলা দূর করার জন্য প্রয়োজনীয় পদক্ষেপ নেয়া হয়েছে কিনা-</span><br>
+                <span>Does any necessary protection measure taken for removing bacteria Salmonella on Betel leaf?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isSalmonellaProtection" ngModel>
+                    <label class="form-check-label" for="salmonella-protection-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isSalmonellaProtection" ngModel>
+                    <label class="form-check-label" for="salmonella-protection-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সালমোনেলা এবং ই. কোলাই ব্যাক্টেরিয়া দূর করার জন্য মাঠ পর্যায়ে কোনো রাসায়নিক অথবা জৈব ব্যাক্টেরিয়া-নাশক ব্যবহার করা হয়েছে কিনা-</span><br>
+                <span>Does any chemical or organic bactericide applied at production level for removing Salmonella and E. coli bacteria?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isChemicalOrganicUsed" ngModel>
+                    <label class="form-check-label" for="production-level-bactericide-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isChemicalOrganicUsed" ngModel>
+                    <label class="form-check-label" for="production-level-bactericide-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সালমোনেলা ছড়ানোর মাধ্যম হিসেবে গরু বাছুর, পাখি, হাস, মুরগীর বিষ্ঠা ব্যবহৃত না হতে পারে সেজন্য প্রয়জনীয় ব্যবস্থা আছে কিনা-</span><br>
+                <span>Is there any necessary steps taken for preventing exertion from cattle, birds, duck, hen or any other animals as disseminating medium of salmonella?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isPreventingExcretion" ngModel>
+                    <label class="form-check-label" for="prevention-excertion-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isPreventingExcretion" ngModel>
+                    <label class="form-check-label" for="prevention-excertion-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
     <div class="text-center mb-4">

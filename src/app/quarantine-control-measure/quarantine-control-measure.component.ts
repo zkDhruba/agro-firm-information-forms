@@ -197,10 +197,106 @@ let vegetableFungicideBactericide: any[] = [
 
   // console.log(vegetableFungicideBactericide, mangoFungicideBactericide, betelLeafFungicideBactericide, otherFungicideBactericide);
   
+  // Structuring Object wise
 
-    
+  let quarantinePestDieases: any = {
+    isQuarantinePestDisese: QCMData.isQuarantinePestDisese,
+    isPestRiskAnalysis: QCMData.isPestRiskAnalysis,
+    pestRiskAnalysis: QCMData.pestRiskAnalysis
+  }
+
+  let quarantineNamePests: any = {
+    vegetableName: QCMData.vegetableName,
+    pestsName: pestsName,
+    mangoPestsName: mangoPestsName,
+    betelLeafPestsName: betelLeafPestsName
+  }
+
+  let quarantinePestDiseseName: any = {
+    vegetableDisesesName: vegetableDisesesName,
+    mangoDisesesName: mangoDisesesName,
+    betelLeafDisesesName: betelLeafDisesesName
+  }
+
+  let controlMeasures: any = {
+    techniquesName: this.selectedTechniques,
+    isIntegration: QCMData.isIntegration,
+    isIntegrationTwoThree: QCMData.isIntegrationTwoThree
+  }
+
+  let organicPesiticide: any = {
+    vegetableOrganicPesticide: vegetableOrganicPesticide,
+    mangoOrganicPesticide: mangoOrganicPesticide,
+    betelLeafOrganicPesticide: betelLeafOrganicPesticide,
+    otherOrganicPesticde: otherOrganicPesticde
+  }
+
+  let chemicalPesticide: any = {
+    vegetableChemicalPesticide: vegetableChemicalPesticide,
+    mangoChemicalPesticide: mangoChemicalPesticide,
+    betelLeafChemicalPesticide: betelLeafChemicalPesticide,
+    otherChemicalPesticide: otherChemicalPesticide
+  }
+
+  let fungicideBactericide: any = {
+    vegetableFungicideBactericide: vegetableFungicideBactericide,
+    mangoFungicideBactericide: mangoFungicideBactericide,
+    betelLeafFungicideBactericide: betelLeafFungicideBactericide,
+    otherFungicideBactericide: otherFungicideBactericide
+  }
+
+  let insectDiseases:any = {
+    isIdentify: QCMData.isIdentify,
+    isSuggestionsTaken: QCMData.isSuggestionsTaken,
+    isPheromoneUsed: QCMData.isPheromoneUsed,
+    pheromoneUsedTime: QCMData.pheromoneUsedTime,
+    isCropPheromoneUsed: QCMData.isCropPheromoneUsed,
+    isChemicalPesticideUsed: QCMData.isChemicalPesticideUsed,
+    isHormonesUsed: QCMData.isHormonesUsed
+  }
+
+  let vegetables:any = {
+    isTimelyControllingPests: QCMData.isTimelyControllingPests,
+    isTimelyControllingDiseascs: QCMData.isTimelyControllingDiseascs,
+    isPheromoneWorked: QCMData.isPheromoneWorked,
+    isRegularlyMonitored: QCMData.isRegularlyMonitored,
+    isBagUsed: QCMData.isBagUsed,
+    colorBag: QCMData.colorBag
+  }
+
+  let mango:any = {
+    isProperManagement: QCMData.isProperManagement,
+    isBaggingUsed: QCMData.isBaggingUsed,
+    isIPMUsed: QCMData.isIPMUsed,
+    daysBeforeBagging: QCMData.daysBeforeBagging,
+    isMeaserTake: QCMData.isMeaserTake,
+    isLodgedBurned: QCMData.isLodgedBurned,
+    isRightAnthracnose: QCMData.isRightAnthracnose
+  }
+
+  let betelLeaf:any = {
+    isSalmonellaProtection: QCMData.isSalmonellaProtection,
+    isChemicalOrganicUsed: QCMData.isChemicalOrganicUsed,
+    isPreventingExcretion: QCMData.isPreventingExcretion
+  }
+
+  let QCMAllData:any = {
+    generalInformationID: '',
+    quarantinePestDieases,
+    quarantineNamePests,
+    quarantinePestDiseseName,
+    controlMeasures,
+    organicPesiticide,
+    chemicalPesticide,
+    fungicideBactericide,
+    insectDiseases,
+    vegetables,
+    mango,
+    betelLeaf
+  }
     
   console.log(QCMData);
+  console.log(QCMAllData);
     
   }
 
