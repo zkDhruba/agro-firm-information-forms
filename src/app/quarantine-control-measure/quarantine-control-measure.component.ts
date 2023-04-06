@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QuarantineControlMeasureDataService } from '../services/quarantine-control-measure-data.service';
 
 @Component({
   selector: 'app-quarantine-control-measure',
@@ -6,6 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./quarantine-control-measure.component.css']
 })
 export class QuarantineControlMeasureComponent {
+
+  quarantineData: any;
+  constructor(private qurantineControlMeasureData: QuarantineControlMeasureDataService) {
+    this.getQuarantineData;
+  }
+
+  getQuarantineData(){
+    this.qurantineControlMeasureData.getQCMData()
+      .subscribe((data)=>{
+        this.quarantineData = data;
+        console.log(data);
+        
+      })
+  }
 
   rowPestNameData = [
     { Pest1: null, Pest2: null, Pest3: null, Pest4: null },
@@ -281,7 +296,7 @@ let vegetableFungicideBactericide: any[] = [
   }
 
   let QCMAllData:any = {
-    generalInformationID: '',
+    generalInformationID: '6427fc064310a9504c8be92b',
     quarantinePestDieases,
     quarantineNamePests,
     quarantinePestDiseseName,
@@ -297,6 +312,11 @@ let vegetableFungicideBactericide: any[] = [
     
   console.log(QCMData);
   console.log(QCMAllData);
+
+  this.qurantineControlMeasureData.addQCMData(QCMAllData)
+    .subscribe(((result)=>{
+      console.warn(result);
+    }))
     
   }
 
