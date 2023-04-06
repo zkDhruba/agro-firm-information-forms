@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CropsHarvestingDataService } from '../services/crops-harvesting-data.service';
 
 @Component({
   selector: 'app-crops-harvesting',
@@ -6,6 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./crops-harvesting.component.css']
 })
 export class CropsHarvestingComponent {
+  
+  cropsHarvesting: any;
+
+  constructor (private cropsHarvestingData: CropsHarvestingDataService) {
+    this.getCropsHavestingData;
+  }
+
+  getCropsHavestingData () {
+    this.cropsHarvestingData.getCHData()
+      .subscribe((data)=>{
+        this.cropsHarvesting = data;
+        console.log(data);
+        
+      })
+  }
 
   onSubmitCropsHaresting(CHData:any){
 
@@ -64,6 +80,7 @@ export class CropsHarvestingComponent {
     }
 
     let CHAllData:( string | object ) = {
+      generalInformationID: "642e5473205d903eaf7a5f7e",
       fieldSanitation,
       harvestField,
       vegetables,
@@ -71,10 +88,15 @@ export class CropsHarvestingComponent {
       betelLeaf,
       localCollectionCenter
     }
-    
+
     console.log(CHData);
     console.log(CHAllData);
-    
+
+    this.cropsHarvestingData.addCHData(CHAllData)
+      .subscribe((result)=>{
+        console.warn(result);
+        
+      })
     
   }
 
