@@ -1,0 +1,597 @@
+<form #cropsHarvestingForm="ngForm" (ngSubmit)="onSubmitCropsHaresting(cropsHarvestingForm.value)">
+    <div id="harvest-management-page" class="border border-secondary bg-light m-5 p-2">
+        <div id="crops-harvesting-box">
+            <h2 class="text-center fs-3">
+                ৮. সংগ্রহত্তর ব্যবস্থাপনা এবং প্যাকেজিং<br>
+                8. Post Harvest Management and Packaging
+            </h2>
+        </div>
+        <hr>
+        <div id="packaging-house-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সেন্ট্রাল প্যাকেজিং হাউজ</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Central Packaging House</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; লোকাল কালেকশন সেন্টার থেকে সেন্টার  প্যাকেজিং হাউজে আনতে কোন ধরনের গাড়ী ব্যবহার করা হয়েছে-</span><br>
+                <span>Which type of transportation used for transporting harvested crop from local collection center to control packaging house?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Normal"
+                        name="transportationType" ngModel>
+                    <label class="form-check-label" for="normal-transport">
+                        <span> নরমাল <br>
+                            Normal</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Refrigerated"
+                        name="transportationType" ngModel>
+                    <label class="form-check-label" for="refrigerated-transport">
+                        <span>রেফ্রিজারেটেড<br>
+                            Refrigerated</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সেন্ট্রাল প্যাকেজিং হাউজে সাধারণ ইন্সপেকশন ব্যবস্থা আছে কিনা-</span><br>
+                <span>Is tehre any facility of inspection at central packaging house?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isInspection" ngModel>
+                    <label class="form-check-label" for="inspection-cph-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isInspection" ngModel>
+                    <label class="form-check-label" for="inspection-cph-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সেন্ট্রাল প্যাকেজিং হাউজে মাইক্রোবিয়াল সংক্রমন দূর করার জন্য ফসল ওয়াশিং রুমের ফ্যাসিলিটি আছে কিনা এবং পণ্য অনুযায়ী ওয়াশ করা হয় কিনা-</span><br>
+                <span>Is there any crop washing room facility at central packaginf house for eliminating microbial infection and is washing done as per crops?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isWashingRoom" ngModel>
+                    <label class="form-check-label" for="washing-room-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isWashingRoom" ngModel>
+                    <label class="form-check-label" for="washing-room-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ওয়াশের পর ফ্যানের বাতাসে শুকানো হয়েছে কিনা-</span><br>
+                <span>Did the washed crops dry up by fan air?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDryByFan" ngModel>
+                    <label class="form-check-label" for="fan-dry-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDryByFan" ngModel>
+                    <label class="form-check-label" for="fan-dry-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সেন্ট্রাল প্যাকেজিং হাউজে ফাইনাল সর্টিং, গ্রেডিং, প্যাকেজিং করার সমস্ত ফ্যাসিলিটি আছে কিনা-</span><br>
+                <span>Have there the facility of controlled temperature on specific products for temporarily preserved before exporting?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isFinalFacilites" ngModel>
+                    <label class="form-check-label" for="final-facilities-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isFinalFacilites" ngModel>
+                    <label class="form-check-label" for="final-facilities-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;রপ্তানির পূর্ব পর্যন্ত ফসল ভেদে সাময়িক ভাবে সংরক্ষন করার তাপমাত্রা নিয়স্ক্রিত ফ্যাসিলিটি আছে কিনা-</span><br>
+                <span>Have the facility of controlled temperature on specific products for temporarily preserved before exporting?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isTamperatureControl" ngModel>
+                    <label class="form-check-label" for="temparature-control-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isTamperatureControl" ngModel>
+                    <label class="form-check-label" for="temparature-control-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সেন্ট্রাল প্যাকেজিং হাউজে কোন ব্যাক্টেরিয়াল কন্টামিনেশন হওয়ার সম্ভাবনা আছে কিনা-</span><br>
+                <span>Have there any possibility of bacterial contamination at central packaging house?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isBacterialContainment" ngModel>
+                    <label class="form-check-label" for="bacterial-contamination-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isBacterialContainment" ngModel>
+                    <label class="form-check-label" for="bacterial-contamination-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সেন্ট্রাল প্যাকেজিং হাউজে হাইজেনিক মেইন্টেন করা হয় কিনা-</span><br>
+                <span>Does hygienic practices maintained at central packaging house?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHygienicPractices" ngModel>
+                    <label class="form-check-label" for="hygienic-practice-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHygienicPractices" ngModel>
+                    <label class="form-check-label" for="hygienic-practice-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;কার্টুন ও প্যকেজিং মেটেরিয়াল সংরক্ষণ করার জন্য নির্দিষ্ট হাইজেনিক রুম আছে কিনা-</span><br>
+                <span>Have there any hygienic isolated room for preserving carton and packaging materials?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHygienicIsolatedRoom" ngModel>
+                    <label class="form-check-label" for="hygienic-room-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHygienicIsolatedRoom" ngModel>
+                    <label class="form-check-label" for="hygienic-room-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সেন্ট্রাল প্যাকেজিং হাউজে পণ্য আগমন এবং পণ্য বহির্গমনের হাইজেনিক পথ আছে কিনা-</span><br>
+                <span>Have there any sorts of products arrival or exit customs which are hygenic?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHygienicArrivalExit" ngModel>
+                    <label class="form-check-label" for="hygenic-custom-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHygienicArrivalExit" ngModel>
+                    <label class="form-check-label" for="hygenic-custom-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------
+        Vegetables, Betel Leaf, Mango
+    ------------------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="preservation-temprature-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সবজি, পান, আম</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Vegetables, Betel leaf, Mango</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সেন্ট্রাল প্যাকেজিং হাউজে সাময়িক ভাবে সংরক্ষনের জন্য সঠিক তাপমাত্রার ব্যবস্থা আছে কিনা-</span><br>
+                <span>Have the facility of appropriate temparature where packaged products are temporarily preserved before exporting at central packaging house?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isAppropriateTemperature" ngModel>
+                    <label class="form-check-label" for="appropriate-temparature-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isAppropriateTemperature" ngModel>
+                    <label class="form-check-label" for="appropriate-temparature-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------
+        Temparature for Temporary Preservation
+    ----------------------------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="preservation-temprature-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সাময়িক সংরক্ষনের তাপমাত্রা</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Temparature for Temporary Preservation</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex d-flex justify-content-evenly row mt-4 ps-4">
+            <div class="input-group mb-3 me-5 col">
+                <span class="input-group-text">সবজি<br>
+                    Vegetables</span>
+                <input type="number" class="form-control" name="vegetables" ngModel>
+                <span class="input-group-text">°C</span>
+            </div>
+            <div class="input-group mb-3 me-5 col">
+                <span class="input-group-text">পান<br>
+                    Betel Leaf</span>
+                <input type="number" class="form-control" name="betelLeaf" ngModel>
+                <span class="input-group-text">°C</span>
+            </div>
+            <div class="input-group mb-3 me-5 col">
+                <span class="input-group-text">আম<br>
+                    Vegetables</span>
+                <input type="number" class="form-control" name="mango" ngModel>
+                <span class="input-group-text">°C</span>
+            </div>
+        </div>
+    </div>
+    <!--------------------
+        Vegetables Box
+    --------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="preservation-temprature-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">সবজি, পান, আম</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Vegetables, Betel leaf, Mango</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সেন্ট্রাল প্যাকেজিং হাউজে সবজি ওয়াশ করার সঠিক ব্যবস্থা আছে কিনা-</span><br>
+                <span>Has there proper methods of cleaning vegetables at central packaging house?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isCleaningMethod" ngModel>
+                    <label class="form-check-label" for="proper-cleaning-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isCleaningMethod" ngModel>
+                    <label class="form-check-label" for="proper-cleaning-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;কাঁকরোল থ্রিপস মারার জন্য বরফ পানিতে ভিজিয়ে রাখা হয়েছিল কিনা-</span><br>
+                <span>Was cold water treatment done in spine gourd for killing thrips?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isColdWaterTreatment" ngModel>
+                    <label class="form-check-label" for="killing-thrips-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isColdWaterTreatment" ngModel>
+                    <label class="form-check-label" for="killing-thrips-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সবজির জন্য ধৌতকৃত পানি ক্লোরিনেশন করে নেওয়া হয়েছিল কিনা-</span><br>
+                <span>Was the water used for washing of vegetables chlorinated?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isChlorineted" ngModel>
+                    <label class="form-check-label" for="water-chlorinated-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isChlorineted" ngModel>
+                    <label class="form-check-label" for="water-chlorinated-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!---------------------
+        Betel Leaf Box
+    ---------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="betelleaf-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">পান</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Betel leaf</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;পান ধোয়ার সঠিক ব্যবস্থা আছে কিনা-</span><br>
+                <span>Have the appropriate management for cleaning of betel lead?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isCleaningMethodBetel" ngModel>
+                    <label class="form-check-label" for="apt-cleaning-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isCleaningMethodBetel" ngModel>
+                    <label class="form-check-label" for="apt-cleaning-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;পান ক্লোরিন পানিতে ধোঁয়া হয়েছে কিনা-</span><br>
+                <span>Did betel leas wash under chlorinated water?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isChlorineted" ngModel>
+                    <label class="form-check-label" for="wash-chlorinated-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isChlorineted" ngModel>
+                    <label class="form-check-label" for="wash-chlorinated-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সালমোনেলা ও অন্যান্য ব্যাক্টেরিয়াল কন্টামিনেশন দূর করার জন্য কি দিয়ে পান ধৌত করা হয়েছে?</span><br>
+                <span>For avoiding of contamination of salmonella and other bacteria, betel leaf washed with-</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Calcinated Calcium"
+                        name="washedWith" ngModel>
+                    <label class="form-check-label" for="calicinated-calcium">
+                        <span> ক্যালিসিনেটেড-ক্যালসিয়াম <br>
+                            Calcinated Calcium</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Refrigerated"
+                        name="washedWith" ngModel>
+                    <label class="form-check-label" for="Salmosun">
+                        <span>সালমোসান<br>
+                            Salmosun</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;কত সময় ট্রিটেড পানিতে রাখা হয়েছে-</span><br>
+                <span>How much time betel leaf soaked under treated water?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-2">
+                    <input type="number" class="form-control" name="treatedTime" ngModel>
+                    <span class="input-group-text">মিনিট <br> minutes</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ট্রিটেড পান পুনরায় পোর্টেবল পানিতে ধৌত করা হয়েছে কিনা-</span><br>
+                <span>Did the treated betel leaf wash with distilled water?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isWashDistilledWater" ngModel>
+                    <label class="form-check-label" for="wash-distilled-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isWashDistilledWater" ngModel>
+                    <label class="form-check-label" for="wash-distilled-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;পান ফ্যানের বাতাসে শোকানো হয়েছে কিনা-</span><br>
+                <span>Did washed betel leaf dry under electric fan?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDryUnderFan" ngModel>
+                    <label class="form-check-label" for="fan-dry-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDryUnderFan" ngModel>
+                    <label class="form-check-label" for="fan-dry-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+</form>
