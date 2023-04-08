@@ -8,3 +8,12 @@
 .flex-container {
     display: flex;
 }
+
+@media only screen and (max-width: 480px) {
+    .d-flex {
+        flex-direction: column;
+    }
+    .flex-container {
+        text-align: center;
+    }
+}

@@ -476,7 +476,7 @@
             </div>
         </div>
         <hr>
-        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
             <div class="form-check">
                 <span>&#x2022;পান ক্লোরিন পানিতে ধোঁয়া হয়েছে কিনা-</span><br>
                 <span>Did betel leas wash under chlorinated water?</span>
@@ -501,13 +501,13 @@
             </div>
         </div>
         <hr>
-        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
             <div class="form-check">
                 <span>&#x2022; সালমোনেলা ও অন্যান্য ব্যাক্টেরিয়াল কন্টামিনেশন দূর করার জন্য কি দিয়ে পান ধৌত করা হয়েছে?</span><br>
                 <span>For avoiding of contamination of salmonella and other bacteria, betel leaf washed with-</span>
             </div>
             <div class="flex-container">
-                <div class="form-check">
+                <div class="form-check pe-2">
                     <input class="form-check-input" type="radio" value="Calcinated Calcium"
                         name="washedWith" ngModel>
                     <label class="form-check-label" for="calicinated-calcium">
@@ -526,7 +526,7 @@
             </div>
         </div>
         <hr>
-        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
             <div class="form-check">
                 <span>&#x2022;কত সময় ট্রিটেড পানিতে রাখা হয়েছে-</span><br>
                 <span>How much time betel leaf soaked under treated water?</span>
@@ -539,7 +539,7 @@
             </div>
         </div>
         <hr>
-        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
             <div class="form-check">
                 <span>&#x2022;ট্রিটেড পান পুনরায় পোর্টেবল পানিতে ধৌত করা হয়েছে কিনা-</span><br>
                 <span>Did the treated betel leaf wash with distilled water?</span>
@@ -564,7 +564,7 @@
             </div>
         </div>
         <hr>
-        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
             <div class="form-check">
                 <span>&#x2022;পান ফ্যানের বাতাসে শোকানো হয়েছে কিনা-</span><br>
                 <span>Did washed betel leaf dry under electric fan?</span>
@@ -589,6 +589,730 @@
             </div>
         </div>
     </div>
+
+    <!---------------
+        Mango Box
+    ---------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="mango-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">আম</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Mango</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;আম ব্যাগিং পদ্ধতি অনুসরন করা হয়ছিল কিনা-</span><br>
+                <span>Did bagging practice use in mango?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isBagging" ngModel>
+                    <label class="form-check-label" for="bagging-used-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isBagging" ngModel>
+                    <label class="form-check-label" for="bagging-used-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; কোন ধরনের ব্যাগ ব্যবহার করা হয়েছিল?</span><br>
+                <span>Which type of bag was used for bagging?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Calcinated Calcium"
+                        name="baggingType" ngModel>
+                    <label class="form-check-label" for="white-bag">
+                        <span> সাদা <br>
+                            White</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Refrigerated"
+                        name="baggingType" ngModel>
+                    <label class="form-check-label" for="brown-bag">
+                        <span> বাদামি<br>
+                            Brown</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;আম গরম পানিতে শোধন করা হয়েছিল কিনা-</span><br>
+                <span>Did mango treated under boiled water?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isBoiledWaterCleaning" ngModel>
+                    <label class="form-check-label" for="boiled-clean-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isBoiledWaterCleaning" ngModel>
+                    <label class="form-check-label" for="boiled-clean-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022; শোধনকৃত তাপমাত্রা ছিল-</span><br>
+                <span>Treated temparature was-</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" [value]=50
+                        name="treatedTemperature" ngModel>
+                    <label class="form-check-label" for="fifty">
+                        <span> ৫০° c <br>
+                            50° c</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" [value]=54
+                        name="treatedTemperature" ngModel>
+                    <label class="form-check-label" for="fifty-four">
+                        <span> ৫৪° c <br>
+                            54° c</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" [value]=55
+                        name="treatedTemperature" ngModel>
+                    <label class="form-check-label" for="fifty-five">
+                        <span> ৫৫° c <br>
+                            55° c</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ফ্যানের বাতাসে শুকানো হয়েছিল কিনা-</span><br>
+                <span>Did treated mango dry under electric fan?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDryUnderFan" ngModel>
+                    <label class="form-check-label" for="fandry-betel-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDryUnderFan" ngModel>
+                    <label class="form-check-label" for="fandry-betel-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------
+        Inspection Box
+    ----------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="inspection-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">ইন্সপেকশন</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Inspection</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ফাইনাল প্যাকেজিং করার আগে কোয়ারেন্টাইন কর্মকর্তার মাধ্যমে ইন্সপেকশন করা হয়েছে কিনা-</span><br>
+                <span>Did inspection done by quarantine officer before final packaging?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isInspectionByOfficer" ngModel>
+                    <label class="form-check-label" for="inspection-done-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isInspectionByOfficer" ngModel>
+                    <label class="form-check-label" for="inspection-done-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ইন্সপেকশনের সময় কোন পোকা ও রোগজীবানু নাই বলে প্রতীয়মান হয়েছে কিনা-</span><br>
+                <span>Was it assured of no existence of insects or diseasesduring inspection?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isNoInsect" ngModel>
+                    <label class="form-check-label" for="no-insects-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isNoInsect" ngModel>
+                    <label class="form-check-label" for="no-insects-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ইন্সপেকশনের পর কোয়ারেন্টাইন কর্মকর্তা কতৃক ফাইটো স্যানিটারী সার্টিফিকেট ইস্যু করা হয়েছিল কিনা-</span><br>
+                <span>Was the phytosanitary certificate issued by quarantine offiecer after inspection?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isCertified" ngModel>
+                    <label class="form-check-label" for="phytosanitary-certificate-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isCertified" ngModel>
+                    <label class="form-check-label" for="phytosanitary-certificate-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ফাইটো স্যানিটারী সার্টিফিকেটের তারিখ কত ছিল-</span><br>
+                <span>The date of phyto sanitary certificate was-</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-2">
+                    <input type="date" class="form-control" name="certificateDate" ngModel>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------
+        Final Packaging
+    --------------------------->
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="final-packaging-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">ইন্সপেকশন</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Inspection</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; রপ্তানির জন্য ববহৃত প্যাকেজিং-</span><br>
+                <span>Packaging for export-</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Fiber box"
+                        name="packagingType" ngModel>
+                    <label class="form-check-label" for="fiber-box">
+                        <span> কোরোগেটেড ফাইবার বক্স <br>
+                            Corrugated fiber box</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Foam box"
+                        name="packagingType" ngModel>
+                    <label class="form-check-label" for="foam-box">
+                        <span> ফোম বক্স <br>
+                            Foam box</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Fiber box"
+                        name="packagingType" ngModel>
+                    <label class="form-check-label" for="other-box">
+                        <span> অন্যান্য <br>
+                            Others</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ক্রেতার চাহিদা ও ফসলের ধরন অনুযায়ী প্যাকিং করা হয়েছিল কিনা-</span><br>
+                <span>Was packing done on the basis of consumer demand and crop type?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="consumerDemandPackaging" ngModel>
+                    <label class="form-check-label" for="demand-packaging-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="consumerDemandPackaging" ngModel>
+                    <label class="form-check-label" for="demand-packaging-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;প্যাকেজিং করার আগে কার্টুন মাইক্রোবিয়াল কন্টামিনেশন মুক্ত করা হয়েছে কিনা-</span><br>
+                <span>Before packaging, does the cartons make free from microbial contamination?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isMicrobialTest" ngModel>
+                    <label class="form-check-label" for="microbial-test-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isMicrobialTest" ngModel>
+                    <label class="form-check-label" for="microbial-test-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; প্যাকেজিং ব্যবহৃত ম্যাটেরিয়াল-</span><br>
+                <span>Packaging materials-</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="New"
+                        name="packagingMaterial" ngModel>
+                    <label class="form-check-label" for="new-material">
+                        <span>  নতুন <br>
+                            New</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Old"
+                        name="packagingMaterial" ngModel>
+                    <label class="form-check-label" for="old-material">
+                        <span> পুরাতন<br>
+                            Old</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;প্যাকেজিং করার সময় ফসল বেঁধে পেপারে মোড়িয়ে প্যাকেজিং করা হয়েছিল কিনা-</span><br>
+                <span>During final packaging, do the crops enclosed and wrapped by papers?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isPaperWrapped" ngModel>
+                    <label class="form-check-label" for="wrapped-paper-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isPaperWrapped" ngModel>
+                    <label class="form-check-label" for="wrapped-paper-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;প্যাকেজিং কার্টুনে ভেন্টিলেশন ব্যবস্থা ছিল কিনা-</span><br>
+                <span>Have any ventilation facility on the packaging cartons?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isVentilation" ngModel>
+                    <label class="form-check-label" for="ventilation-package-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isVentilation" ngModel>
+                    <label class="form-check-label" for="ventilation-package-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ফোমিং বক্সে প্যাকেজিং করার সময় ড্রাই আইস ব্যবহার করা হয়েছে কিনা-</span><br>
+                <span>Do dry ice used during packaging cartons?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDryIceUsed" ngModel>
+                    <label class="form-check-label" for="dryice-package-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDryIceUsed" ngModel>
+                    <label class="form-check-label" for="dryice-package-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ড্রাই আইস পোর্টেবল পানি থেকে তৈরী করা হয়েছিল কিনা-</span><br>
+                <span>Did dry ice make by distilled water?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDistilledMade" ngModel>
+                    <label class="form-check-label" for="distilled-dryice-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDistilledMade" ngModel>
+                    <label class="form-check-label" for="distilled-dryice-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;প্যাকেজিং কাজ সম্পাদন করে কত সময় ষ্টোর করা হয়েছিল- </span><br>
+                <span>How much time stored after completed final packaging?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-2">
+                    <input type="number" class="form-control" name="storedTime" ngModel>
+                    <span class="input-group-text">ঘন্টা <br> Hour(s)</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; সেন্ট্রাল প্যাকিং হাউস থেকে এয়ারপোর্ট অথবা সী-পোর্টে নেয়ার জন্য কোন ধরনের ভ্যান ব্যবহার করা হয়েছিল?</span><br>
+                <span>Which type of van was used for transportation from central packing house to airport or sea port?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Normal"
+                        name="vanType" ngModel>
+                    <label class="form-check-label" for="normal-van">
+                        <span>  নরমাল <br>
+                            Normal</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Refrigerated"
+                        name="vanType" ngModel>
+                    <label class="form-check-label" for="refrigerated-van">
+                        <span> রেফ্রিজারেটেড<br>
+                            Refrigerated</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; কোন পথে পণ্যটি রপ্তানি করা হয়েছে</span><br>
+                <span>Which route was used for the exporting of the product?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Air"
+                        name="routeType" ngModel>
+                    <label class="form-check-label" for="air-way">
+                        <span>  আকাশ পথে <br>
+                            By Air</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Sea"
+                        name="routeType" ngModel>
+                    <label class="form-check-label" for="sea-way">
+                        <span>  নদী পথে<br>
+                            By sea</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;যদি আকাশ পথে কোন কারণে পণ্যটি সঠিক সময়ে রপ্তানী না হয়, তবে সেন্ট্রাল প্যাকিং হাউজে তাপমাত্রা নিয়ন্ত্রন কক্ষে রাখার ব্যবস্থা আছে কিনা-</span><br>
+                <span>If there is delay in exporting the product at the just time, then is there any facility of temparature controlling room in central packing house?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isTemperatureControlRoom" ngModel>
+                    <label class="form-check-label" for="delay-temaparature-control-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isTemperatureControlRoom" ngModel>
+                    <label class="form-check-label" for="delay-temaparature-control-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ফাইটোস্যানেটারি সার্টিফিকেট সংযোজন করা হয়েছে কিনা-</span><br>
+                <span>Do phytosanitary certificate added to the exported product.</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isPhytoSanitaryCertificate" ngModel>
+                    <label class="form-check-label" for="certificate-added-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isPhytoSanitaryCertificate" ngModel>
+                    <label class="form-check-label" for="certificate-added-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;প্যাকেজিং এর গায়ে রপ্তানিকারক ও আমদানি কারকের নাম এবং সকল তথ্যাদি লেবেলিং করা হয়েছে কিনা-</span><br>
+                <span>Did all information of exporter and importer lebelled on cartoon?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isLebeling" ngModel>
+                    <label class="form-check-label" for="information-label-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isLebeling" ngModel>
+                    <label class="form-check-label" for="information-label-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;রপ্তানিকৃত পণ্যটি কোন দেশে রপ্তানি করা হয়েছে? </span><br>
+                <span>In which country the product exported?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-2">
+                    <input type="text" class="form-control" name="exportedCountry" ngModel>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;রপ্তানিকৃত পণ্যের রপ্তানিকারকের নাম </span><br>
+                <span>Name of the exporter and Company and Company of the exported product</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-2">
+                    <input type="text" class="form-control" name="exporterName" ngModel>
+                    <span class="input-group-text">কোম্পানি</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;রপ্তানির তারিখ</span><br>
+                <span>Date of Export</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-2">
+                    <input type="date" class="form-control" name="exportedDate" ngModel>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;আমদানিকারকের নাম- </span><br>
+                <span>Name of the Importer and Company</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-2">
+                    <input type="text" class="form-control" name="importerName" ngModel>
+                    <span class="input-group-text">কোম্পানি</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;রপ্তানিকৃত পণ্যটি আমদানিকৃত দেশ কর্তৃক বাতিল হয়েছে কিনা-</span><br>
+                <span>Did the exported product reject by imported country?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isRejected" ngModel>
+                    <label class="form-check-label" for="country-reject-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isRejected" ngModel>
+                    <label class="form-check-label" for="country-reject-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; বাতিল হয়ে থাকলে কারণ-</span><br>
+                <span>If rejected, the reason for rejection was-</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Misclear"
+                        name="rejectedReason" ngModel>
+                    <label class="form-check-label" for="reason-misdeclare">
+                        <span> মিসডিক্লিয়ার <br>
+                            Misdeclare</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Insects"
+                        name="rejectedReason" ngModel>
+                    <label class="form-check-label" for="reason-insect">
+                        <span>  পোকা  <br>
+                            Insects</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Diseases"
+                        name="rejectedReason" ngModel>
+                    <label class="form-check-label" for="reason-diseases">
+                        <span> রোগ <br>
+                            Diseases</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="text-center mb-4">
         <button type="submit" class="btn btn-primary">Submit</button>

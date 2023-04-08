@@ -9,7 +9,7 @@ export class HarvestManagementPackagingComponent {
 
 
   onSubmitCropsHaresting(HMPData: any){
-
+    console.log(HMPData);
   }
 
 }
