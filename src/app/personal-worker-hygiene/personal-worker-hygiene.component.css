@@ -1,0 +1,19 @@
+.text-box {
+    height: 35px;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+@media only screen and (max-width: 480px) {
+    .d-flex {
+        flex-direction: column;
+    }
+    .flex-container {
+        text-align: center;
+    }
+}

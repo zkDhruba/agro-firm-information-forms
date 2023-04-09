@@ -15,6 +15,7 @@ import { FertilizerAndFertilizingComponent } from './fertilizer-and-fertilizing/
 import { QuarantineControlMeasureComponent } from './quarantine-control-measure/quarantine-control-measure.component';
 import { CropsHarvestingComponent } from './crops-harvesting/crops-harvesting.component';
 import { HarvestManagementPackagingComponent } from './harvest-management-packaging/harvest-management-packaging.component';
+import { PersonalWorkerHygieneComponent } from './personal-worker-hygiene/personal-worker-hygiene.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HarvestManagementPackagingComponent } from './harvest-management-packag
     FertilizerAndFertilizingComponent,
     QuarantineControlMeasureComponent,
     CropsHarvestingComponent,
-    HarvestManagementPackagingComponent
+    HarvestManagementPackagingComponent,
+    PersonalWorkerHygieneComponent
   ],
   imports: [
     BrowserModule,

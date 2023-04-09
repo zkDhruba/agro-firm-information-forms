@@ -1,0 +1,630 @@
+<form #hygieneForm="ngForm" (ngSubmit)="onSubmitPersonalAndWorkerHygiene(hygieneForm.value)">
+    <div id="hygiene-page" class="border border-secondary bg-light m-5 p-2">
+        <div id="crops-harvesting-box">
+            <h2 class="text-center fs-3">
+                ৯. পার্সোনাল ও ওয়ার্কার হাইজিন<br>
+                9. Personal and Worker Hygiene
+            </h2>
+        </div>
+        <hr>
+        <div id="farm-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">খামার</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Farm</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;খামারের পাশে ওয়ার্কারের জন্য কোন রেষ্ট হাউজ আছে কিনা-</span><br>
+                <span>Have any rest house for the farm workers beside the farm?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isRestHouse" ngModel>
+                    <label class="form-check-label" for="rest-house-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isRestHouse" ngModel>
+                    <label class="form-check-label" for="rest-house-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ঠিকমত টয়লেট এবং স্যানিটেশন ব্যবস্থা আছে কিনা-</span><br>
+                <span>Have the facility of proper toilet and sanitation?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isToilet" ngModel>
+                    <label class="form-check-label" for="toilet-sanitation-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isToilet" ngModel>
+                    <label class="form-check-label" for="toilet-sanitation-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;পোর্টেবল পানির সুব্যবস্থা আছে কিনা-</span><br>
+                <span>Have the provision of distilled water?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDistilledWater" ngModel>
+                    <label class="form-check-label" for="distilled-water-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDistilledWater" ngModel>
+                    <label class="form-check-label" for="distilled-water-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;কাজের পর হাত ধোয়ার জন্য সাবান এর ব্যবস্থা আছে কিনা-</span><br>
+                <span>Is any provision for soap washing the hand after working on field?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isSoap" ngModel>
+                    <label class="form-check-label" for="soap-facility-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isSoap" ngModel>
+                    <label class="form-check-label" for="soap-facility-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;খামারের ব্যবহৃত যন্ত্রপাতি, কীটনাশক, সার ও অন্যান্য জিনিস রাখার সঠিক আলাদা কক্ষের ব্যবস্থা আছে কিনা-</span><br>
+                <span>Have any arrangement for special room storing farm tools, pesticides, fertilizers and other farm related materials?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isMaterialRoom" ngModel>
+                    <label class="form-check-label" for="storing-room-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isMaterialRoom" ngModel>
+                    <label class="form-check-label" for="storing-room-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;খামারের চারপাশে গৃহপালিত পশু ও পাখি মানুষ অবাধ বিচরণ রোধ করার ব্যবস্থা আছে কিনা-</span><br>
+                <span>Does free roaming of domestic animals, birds or human around the farm arrested?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isRoamingFree" ngModel>
+                    <label class="form-check-label" for="roaming-arrested-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isRoamingFree" ngModel>
+                    <label class="form-check-label" for="roaming-arrested-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;খামারের প্রবেশের মুখে হাইজেনিক দ্রব্যাদি ব্যবহার করা হয় কিনা-</span><br>
+                <span>Does hygiene products used on entrance of farm?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHygieneProduct" ngModel>
+                    <label class="form-check-label" for="hygiene-products-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHygieneProduct" ngModel>
+                    <label class="form-check-label" for="hygiene-products-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;সকাল বিকাল খামার মনিটর করা হয় কিনা-</span><br>
+                <span>Does the farm monitored regularly?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isMonitoring" ngModel>
+                    <label class="form-check-label" for="monitoring-regularly-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isMonitoring" ngModel>
+                    <label class="form-check-label" for="monitoring-regularly-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;খামারের পোশাক পরিবর্তনের জন্য আলাদা রুম আছে কিনা-</span><br>
+                <span>Has there any facility of separate dress changing room?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDressingRoom" ngModel>
+                    <label class="form-check-label" for="changing-room-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDressingRoom" ngModel>
+                    <label class="form-check-label" for="changing-room-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------
+        Intercultural Operation Box
+    ----------------------------------->
+
+
+    <div class="border border-secondary bg-light m-5 p-2">
+        <div id="intercultural-operation-box" class="container text-center w-50">
+            <div class="row bg-success-subtle">
+                <div class="col border border-secondary border-end-0 p-2">
+                    <span class="fs-6">আন্তঃপরিচর্যা</span>
+                </div>
+                <div class="col border border-secondary p-2">
+                    <span class="fs-6">Intercultural Operation</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022;জমিতে কাজ করার সময় নির্ধারিত হাইজেনিক পোশাক ব্যবহার করা হয় কিনা-</span><br>
+                <span>During working on field, does hygienic dress used?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHygieneDressUsed" ngModel>
+                    <label class="form-check-label" for="hygienic-dress-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHygieneDressUsed" ngModel>
+                    <label class="form-check-label" for="hygienic-dress-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;যন্ত্রপাতি কাজ শেষে পরিচ্ছন্ন করে নির্দিষ্ট কক্ষে রাখা হয় কিনা-</span><br>
+                <span>After working, does tools cleaned properly and stored on particular room?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isStoredProperly" ngModel>
+                    <label class="form-check-label" for="tools-cleaned-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isStoredProperly" ngModel>
+                    <label class="form-check-label" for="tools-cleaned-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;জমিতে সার দেয়ার পর নিজেকে রিফ্রেস করা হয় কিনা-</span><br>
+                <span>After fertilizing, does applier refreshed himself properly?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isRefreshed" ngModel>
+                    <label class="form-check-label" for="refresh-himself-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isRefreshed" ngModel>
+                    <label class="form-check-label" for="refresh-himself-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;কীটনাশক স্প্রে করে নিজেকে পরিচ্ছন্ন করা হয়েছে কিনা-</span><br>
+                <span>After application of pesticide, does applier cleaned himself properly?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isCleaned" ngModel>
+                    <label class="form-check-label" for="cleaned-himself-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isCleaned" ngModel>
+                    <label class="form-check-label" for="cleaned-himself-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-4 mb-2">
+            <div class="form-check">
+                <span>&#x2022; কীটনাশক কখন দেয়া হয়েছে?</span><br>
+                <span>Which time of the day pesticide applied?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Morning"
+                        name="pesticideApplied" ngModel>
+                    <label class="form-check-label" for="applied-morning">
+                        <span>সকাল <br>
+                            Morning</span>
+                    </label>
+                </div>
+                <div class="form-check pe-2">
+                    <input class="form-check-input" type="radio" value="Afternoon"
+                        name="pesticideApplied" ngModel>
+                    <label class="form-check-label" for="applied-afternoon">
+                        <span>  বিকাল  <br>
+                            Afternoon</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;বাতাস প্রবাহ দেখে সঠিক দিক থেকে কীটনাশক স্প্রে করা হয়েছিল কিনা-</span><br>
+                <span>Does flow of air and right direction checked during pesticide application?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isRightDirection" ngModel>
+                    <label class="form-check-label" for="air-direction-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isRightDirection" ngModel>
+                    <label class="form-check-label" for="air-direction-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;কীটনাশক দেয়ার সময় কৃষি বিভাগের পরামর্শ নেয়া হয়েছে কিনা-</span><br>
+                <span>Does DAE recommend the pesticide which applied on field?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isDAE" ngModel>
+                    <label class="form-check-label" for="dae-recommend-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isDAE" ngModel>
+                    <label class="form-check-label" for="dae-recommend-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ফসল সংগ্রহের কতদিন আগে পোকা ও রোগ নিরুধক ব্যবহার করা হয়েছিল? </span><br>
+                <span>How many days before harvesting of crop pesticide and fungicide were used?</span>
+            </div>
+            <div class="flex-container">
+                <div class="input-group mb-3 me-2">
+                    <input type="number" class="form-control" name="daysBeforeHarvest" ngModel>
+                    <span class="input-group-text"> দিন <br> Day(s)</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;ফসল সংগ্রহের সময় কৃষি বিভাগের পরামর্শ নেয়া হয়েছে কিনা-</span><br>
+                <span>Does any information taken from DAE before crop harvesting?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isInformationTaken" ngModel>
+                    <label class="form-check-label" for="information-taken-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isInformationTaken" ngModel>
+                    <label class="form-check-label" for="information-taken-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;হাতে গ্লাভস পরে ফসল সংগ্রহ করা হয় কিনা-</span><br>
+                <span>Does hand gloves used during crop harvesting?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHandGlovesUsed" ngModel>
+                    <label class="form-check-label" for="hand-gloves-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHandGlovesUsed" ngModel>
+                    <label class="form-check-label" for="hand-gloves-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;পন্য সর্টিং, গ্রেডিং ও প্যাকেজিং এর সময় সকল হাইজেনিক অবস্থা মেইন্টেইন করে কাজ করা হয় কিনা-</span><br>
+                <span>Does all sorts of hygienic conditions maintained during product sorting, grading and packaging?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isHygienic" ngModel>
+                    <label class="form-check-label" for="hygienic-product-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isHygienic" ngModel>
+                    <label class="form-check-label" for="hygienic-product-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;প্যাকেজিং ম্যাটেরিয়াল হান্ডেলিং করার সময় পারসোনাল হাইজেনিক মেইন্টেইন করা হয়েছিল কিনা-</span><br>
+                <span>During handling of packing materials, does personal hygiene maintained?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isPersonalHygiene" ngModel>
+                    <label class="form-check-label" for="personal-hygiene-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isPersonalHygiene" ngModel>
+                    <label class="form-check-label" for="personal-hygiene-no">
+                        <span>না<br>
+                            No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;প্যাকেজিং ম্যাটেরিয়াল হান্ডেলিং করার সময় পারসোনাল হাইজেনিক মেইন্টেইন করা হয়েছিল কিনা-</span><br>
+                <span>During handling of packing materials, does personal hygiene maintained?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isPersonalHygiene" ngModel>
+                    <label class="form-check-label" for="personal-hygiene-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isPersonalHygiene" ngModel>
+                    <label class="form-check-label" for="personal-hygiene-no">
+                        <span>না<br>
+                            NO</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;উৎপাদন থেকে শুরু করে সংগ্রহ, সংগ্রহোত্তর ব্যবস্থাপনা সঠিক উপায়ে শিপমেন্ট করা পর্যন্ত প্রতিটি ধাপে হাইজেনিক পদ্ধতি মেইন্টেইন করা হয় কিনা-</span><br>
+                <span>Starting from production, harvesting, psot harvest management and until shipping the harvested products by the right way, does hygienic procedure maintained each and every step?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isAllHygiene" ngModel>
+                    <label class="form-check-label" for="all-procedure-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isAllHygiene" ngModel>
+                    <label class="form-check-label" for="all-procedure-no">
+                        <span>না<br>
+                            NO</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between single-info-line mt-2 mb-2">
+            <div class="form-check">
+                <span>&#x2022;উৎপাদন, সংগ্রহ, সংগ্রহোত্তর ব্যবস্থাপনা ও শিপমেন্টের পূর্ব পর্যন্ত  GAP, GHP, GMP এর প্রতিটি ধাপে  HACCP মূলনীতি অনুসরন করা হয়েছে কিনা-</span><br>
+                <span>Production, Harvesting, Post harvest management and before shipment of harvested crop, does HACCP principle maintained on each steps of GAP,GHP & GMP?</span>
+            </div>
+            <div class="flex-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=true
+                        name="isAllPrincipleMaintained" ngModel>
+                    <label class="form-check-label" for="all-principle-yes">
+                        <span>হ্যা <br>
+                            Yes</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [value]=false
+                        name="isAllPrincipleMaintained" ngModel>
+                    <label class="form-check-label" for="all-principle-no">
+                        <span>না<br>
+                            NO</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+</form>
