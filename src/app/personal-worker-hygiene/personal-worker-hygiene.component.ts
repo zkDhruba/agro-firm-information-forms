@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PersonalWorkerHygieneDataService } from '../services/personal-worker-hygiene-data.service';
 
 @Component({
   selector: 'app-personal-worker-hygiene',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./personal-worker-hygiene.component.css']
 })
 export class PersonalWorkerHygieneComponent {
+
+  personalAndWorkerHygiene: any;
+  constructor (private personalAndWorkerHygieneData: PersonalWorkerHygieneDataService) {}
+
+  getHygieneData(){
+    this.personalAndWorkerHygieneData.getPWHData()
+      .subscribe((data)=>{
+        this.personalAndWorkerHygiene = data;
+        console.log(data);
+      })
+  }
 
   onSubmitPersonalAndWorkerHygiene(PWH: any){
 
@@ -38,7 +50,8 @@ export class PersonalWorkerHygieneComponent {
       isAllPrincipleMaintained: PWH.isAllPrincipleMaintained
     }
 
-    let PWHAllData:object = {
+    let PWHAllData:any = {
+      generalInformationID: "642e543b49b5e5cf724c71da",
       fram,
       interculteralOperation
 
@@ -46,6 +59,12 @@ export class PersonalWorkerHygieneComponent {
 
     console.log(PWH);
     console.log(PWHAllData);
+
+    this.personalAndWorkerHygieneData.addPWHData(PWHAllData)
+      .subscribe((result)=>{
+        console.warn(result);
+        
+      })
     
     
   }
