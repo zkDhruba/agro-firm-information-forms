@@ -16,6 +16,7 @@ import { QuarantineControlMeasureComponent } from './quarantine-control-measure/
 import { CropsHarvestingComponent } from './crops-harvesting/crops-harvesting.component';
 import { HarvestManagementPackagingComponent } from './harvest-management-packaging/harvest-management-packaging.component';
 import { PersonalWorkerHygieneComponent } from './personal-worker-hygiene/personal-worker-hygiene.component';
+import { IncomeExpenseComponent } from './income-expense/income-expense.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { PersonalWorkerHygieneComponent } from './personal-worker-hygiene/person
     QuarantineControlMeasureComponent,
     CropsHarvestingComponent,
     HarvestManagementPackagingComponent,
-    PersonalWorkerHygieneComponent
+    PersonalWorkerHygieneComponent,
+    IncomeExpenseComponent
   ],
   imports: [
     BrowserModule,
