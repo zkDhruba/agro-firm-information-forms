@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HarvestManagementPackingDataService } from '../services/harvest-management-packing-data.service';
 
 @Component({
   selector: 'app-harvest-management-packaging',
@@ -6,6 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./harvest-management-packaging.component.css']
 })
 export class HarvestManagementPackagingComponent {
+
+  postManagement:any;
+
+  constructor (private harvestManagementData: HarvestManagementPackingDataService) {}
+
+  getHarvestManagementData (){
+    this.harvestManagementData.getHMPData()
+      .subscribe((data)=>{
+        this.postManagement = data;
+        console.log(data);
+      })
+  }
 
 
   onSubmitCropsHaresting(HMPData: any){
@@ -50,7 +63,6 @@ export class HarvestManagementPackagingComponent {
       baggingType: HMPData.baggingType,
       isBoiledWaterCleaning: HMPData.isBoiledWaterCleaning,
       treatedTemperature: HMPData.treatedTemperature,
-      isWashDistilledWater: HMPData.isWashDistilledWater,
       isDryUnderFan: HMPData.isDryUnderFanMango
     }
 
@@ -85,16 +97,24 @@ export class HarvestManagementPackagingComponent {
     }
 
     let HMPAllData: object = {
+      generalInformationID: "642e5473205d903eaf7a5f7e",
       centerPackaging,
       temperatureControl,
       vegetables,
       betelLeaf,
       mango,
-      inspection
+      inspection,
+      finalPackaging
     }
 
     console.log(HMPData);
     console.log(HMPAllData);
+
+    this.harvestManagementData.addHMPData(HMPAllData)
+      .subscribe((result)=>{
+        console.warn(result);
+        
+      })
     
   }
 

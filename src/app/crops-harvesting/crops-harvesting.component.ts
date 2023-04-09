@@ -19,7 +19,6 @@ export class CropsHarvestingComponent {
       .subscribe((data)=>{
         this.cropsHarvesting = data;
         console.log(data);
-        
       })
   }
 
@@ -79,7 +78,7 @@ export class CropsHarvestingComponent {
       minutes: CHData.minutes
     }
 
-    let CHAllData:( string | object ) = {
+    let CHAllData:object = {
       generalInformationID: "642e5473205d903eaf7a5f7e",
       fieldSanitation,
       harvestField,
