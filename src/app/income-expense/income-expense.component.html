@@ -27,9 +27,19 @@
                             <ng-container [ngSwitch]="i">
                                 <input type="number" for="lease" *ngSwitchCase="0" name="leaseCost" ngModel>
                                 <input type="number" for="soil-test" *ngSwitchCase="1" name="soilTestCost" ngModel>
-                                <input type="number" for="lease" *ngSwitchCase="2" name="landPreparationCost" ngModel>
+                                <input type="number" for="land-preparation" *ngSwitchCase="2" name="landPreparationCost" ngModel>
                                 <input type="number" for="lease" *ngSwitchCase="3" name="seedCost" ngModel>
-                                <span *ngSwitchDefault>Dose {{ i + 1 }}</span>
+                                <input type="number" for="lease" *ngSwitchCase="4" name="fertilizerCost" ngModel>
+                                <input type="number" for="lease" *ngSwitchCase="5" name="irrigationCost" ngModel>
+                                <input type="number" for="lease" *ngSwitchCase="6" name="interCulturalCost" ngModel>
+                                <input type="number" for="lease" *ngSwitchCase="7" name="laborCost" ngModel>
+                                <input type="number" for="lease" *ngSwitchCase="8" name="transportCost" ngModel>
+                                <input type="number" for="lease" *ngSwitchCase="9" name="otherCost" ngModel>
+                                <span *ngSwitchCase="10"></span>
+                                <input type="number" for="lease" *ngSwitchCase="11" name="totalProduction" ngModel>
+                                <input type="number" for="lease" *ngSwitchCase="12" name="totalSale" ngModel>
+                                <span *ngSwitchCase="13"></span>
+                                <!-- <span *ngSwitchDefault>Dose {{ i + 1 }}</span> -->
                             </ng-container>
                         </td>
                     </tr>
