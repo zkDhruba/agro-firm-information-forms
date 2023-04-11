@@ -20,8 +20,12 @@ export class HarvestManagementPackagingComponent {
       })
   }
 
+  submitted = false;
+
 
   onSubmitCropsHaresting(HMPData: any){
+
+    this.submitted = true;
 
     let centerPackaging: object = {
       transportationType: HMPData.transportationType,

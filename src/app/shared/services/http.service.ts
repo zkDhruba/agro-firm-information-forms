@@ -33,6 +33,9 @@ export class HttpService {
   PWHGetUrl = 'https://modern-pink-trench-coat.cyclic.app/api/personal-worker-hygiene/get-by-general-info-id/642e543b49b5e5cf724c71da';
   PWHPostUrl = 'https://modern-pink-trench-coat.cyclic.app/api/personal-worker-hygiene/add';
 
+  IEGetUrl = 'https://modern-pink-trench-coat.cyclic.app/api/farmers-expenses-income/get-by-general-info-id/642e5473205d903eaf7a5f7e';
+  IEPostUrl = 'https://modern-pink-trench-coat.cyclic.app/api/farmers-expenses-income/add';
+
 
 
   constructor(private http: HttpClient) { }
@@ -107,6 +110,14 @@ export class HttpService {
 
   addPWHData (data:any){
     return this.http.post(this.PWHPostUrl, data);
+  }
+
+  getIEData () {
+    return this.http.get(this.IEGetUrl);
+  }
+
+  addIEData (data:any){
+    return this.http.post(this.IEPostUrl, data);
   }
 
 }

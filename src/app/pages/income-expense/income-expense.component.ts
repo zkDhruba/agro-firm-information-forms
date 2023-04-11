@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpService } from '../../shared/services/http.service'
 
 @Component({
   selector: 'app-income-expense',
@@ -16,7 +17,7 @@ export class IncomeExpenseComponent {
     { item: 'সার / Firtilizer', expenditure: null },
     { item: 'সেচ / Irrigation', expenditure: null },
     { item: 'আন্তঃপরিচর্যা / Intercultural Operation', expenditure: null },
-    { item: 'শ্রমিক / Labour', expenditure: null },
+    { item: 'শ্রমিক / Labor', expenditure: null },
     { item: 'পরিবহন / Transport', expenditure: null },
     { item: 'অন্যান্য / Others', expenditure: null },
     { item: 'মোট খরচ (টাকা) খ Total Expenses', expenditure: null },
@@ -36,12 +37,40 @@ export class IncomeExpenseComponent {
   transportCost:number = 0;
   otherCost:number = 0;
   totalSale:number = 0;
-  totalCost:number = this.leaseCost + this.soilTestCost + this.landPreparationCost + this.seedCost + this.fertilizerCost + this.irrigationCost + this.interCulturalCost + this.laborCost + this.transportCost + this.otherCost;
+  totalProduction:number = 0;
 
+  incomeExpense:any;
+
+  constructor (private incomeExpenseAccountData: HttpService) {
+  }
+
+  getIncomeExpenseData(){
+    this.incomeExpenseAccountData.getIEData()
+      .subscribe((data)=>{
+        this.incomeExpense = data;
+        console.log(data);
+      })
+  }
 
   onSubmitIncomeExpense(IEData: any) {
-    IEData.
-    console.log(IEData);
+    let totalCost:number = IEData.leaseCost + IEData.soilTestCost + IEData.landPreparationCost + IEData.seedCost + IEData.fertilizerCost + IEData.irrigationCost + IEData.interCulturalCost + IEData.laborCost + IEData.transportCost + IEData.otherCost;
 
+    let totalProfit:number = IEData.totalSale - totalCost;
+
+    let IEAllData:object = {
+      generalInformationID: "642e5473205d903eaf7a5f7e",
+      ...IEData,
+      totalCost,
+      totalProfit
+    }
+    
+    console.log(IEAllData);
+
+    this.incomeExpenseAccountData.addIEData(IEAllData)
+      .subscribe((result)=>{
+        console.warn(result);
+      })
+
+      localStorage.setItem('Income Expense Local', JSON.stringify(IEAllData));
   }
 }

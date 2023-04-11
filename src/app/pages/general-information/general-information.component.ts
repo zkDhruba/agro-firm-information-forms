@@ -127,9 +127,9 @@ export class GeneralInformationComponent {
     console.log(GIAllData);
     this.generalInfoData.addGIData(GIAllData).subscribe((result)=>{
       console.warn(result);
-      
     })
-    
+
+    localStorage.setItem('General Info Local', JSON.stringify(GIAllData));
     
     
   }

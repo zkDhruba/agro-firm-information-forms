@@ -25,20 +25,20 @@
                         <td><span>{{row.item}}</span></td>
                         <td class="text-center">
                             <ng-container [ngSwitch]="i" #inputFields>
-                                <input type="number" for="lease" *ngSwitchCase="0" name="leaseCost" [(ngModel)]="leaseCost">
-                                <input type="number" for="soil-test" *ngSwitchCase="1" name="soilTestCost" [(ngModel)]="soilTestCost">
-                                <input type="number" for="land-preparation" *ngSwitchCase="2" name="landPreparationCost" [(ngModel)]="landPreparationCost">
-                                <input type="number" for="lease" *ngSwitchCase="3" name="seedCost" [(ngModel)]="seedCost">
-                                <input type="number" for="lease" *ngSwitchCase="4" name="fertilizerCost" [(ngModel)]="fertilizerCost">
-                                <input type="number" for="lease" *ngSwitchCase="5" name="irrigationCost" [(ngModel)]="irrigationCost">
-                                <input type="number" for="lease" *ngSwitchCase="6" name="interCulturalCost" [(ngModel)]="interCulturalCost">
-                                <input type="number" for="lease" *ngSwitchCase="7" name="laborCost" [(ngModel)]="laborCost">
-                                <input type="number" for="lease" *ngSwitchCase="8" name="transportCost" [(ngModel)]="transportCost">
-                                <input type="number" for="lease" *ngSwitchCase="9" name="otherCost" [(ngModel)]="otherCost">
-                                <span *ngSwitchCase="10" name="totalCost" ngModel>{{this.leaseCost + this.soilTestCost + this.landPreparationCost + this.seedCost + this.fertilizerCost + this.irrigationCost + this.interCulturalCost + this.laborCost + this.transportCost + this.otherCost}}</span>
-                                <input type="number" for="lease" *ngSwitchCase="11" name="totalProduction" ngModel>
-                                <input type="number" for="lease" *ngSwitchCase="12" name="totalSale" [(ngModel)]="totalSale">
-                                <span *ngSwitchCase="13" name="totalProfit" ngModel>{{this.totalSale - this.leaseCost - this.soilTestCost - this.landPreparationCost - this.seedCost - this.fertilizerCost - this.irrigationCost - this.interCulturalCost - this.laborCost - this.transportCost - this.otherCost}}</span>
+                                <input class="text-center" type="number" min="0" for="lease" *ngSwitchCase="0" name="leaseCost" [(ngModel)]="leaseCost">
+                                <input class="text-center" type="number" for="soil-test" *ngSwitchCase="1" name="soilTestCost" [(ngModel)]="soilTestCost">
+                                <input class="text-center" type="number" for="land-preparation" *ngSwitchCase="2" name="landPreparationCost" [(ngModel)]="landPreparationCost">
+                                <input class="text-center" type="number" for="seed-cost" *ngSwitchCase="3" name="seedCost" [(ngModel)]="seedCost">
+                                <input class="text-center" type="number" for="fertilizer-cost" *ngSwitchCase="4" name="fertilizerCost" [(ngModel)]="fertilizerCost">
+                                <input class="text-center" type="number" for="irrigation-cost" *ngSwitchCase="5" name="irrigationCost" [(ngModel)]="irrigationCost">
+                                <input class="text-center" type="number" for="intercultural-cost" *ngSwitchCase="6" name="interCulturalCost" [(ngModel)]="interCulturalCost">
+                                <input class="text-center" type="number" for="labor-cost" *ngSwitchCase="7" name="laborCost" [(ngModel)]="laborCost">
+                                <input class="text-center" type="number" for="transport-cost" *ngSwitchCase="8" name="transportCost" [(ngModel)]="transportCost">
+                                <input class="text-center" type="number" for="other-cost" *ngSwitchCase="9" name="otherCost" [(ngModel)]="otherCost">
+                                <span class="pe-3" *ngSwitchCase="10" name="totalCost" #totalCost>{{this.leaseCost + this.soilTestCost + this.landPreparationCost + this.seedCost + this.fertilizerCost + this.irrigationCost + this.interCulturalCost + this.laborCost + this.transportCost + this.otherCost}}</span>
+                                <input class="text-center" type="number" for="total-production" *ngSwitchCase="11" name="totalProduction" [(ngModel)]="totalProduction">
+                                <input class="text-center" type="number" for="total-sale" *ngSwitchCase="12" name="totalSale" [(ngModel)]="totalSale">
+                                <span class="pe-3" *ngSwitchCase="13" name="total-profit">{{this.totalSale - this.leaseCost - this.soilTestCost - this.landPreparationCost - this.seedCost - this.fertilizerCost - this.irrigationCost - this.interCulturalCost - this.laborCost - this.transportCost - this.otherCost}}</span>
                                 <!-- <span *ngSwitchDefault>Dose {{ i + 1 }}</span> -->
                             </ng-container>
                         </td>
